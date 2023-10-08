@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="PECLGonzalezHernandezGisela" Database="" Version="10000">
+  <Project Name="PECLGonzalezHernandezGisela" Path="PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela.project" Active="Yes"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug">
+      <Environment/>
+      <Project Name="PECLGonzalezHernandezGisela" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release">
+      <Environment/>
+      <Project Name="PECLGonzalezHernandezGisela" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
