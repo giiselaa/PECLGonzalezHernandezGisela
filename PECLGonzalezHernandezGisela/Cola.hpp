@@ -4,7 +4,7 @@
 class Cola
 {
 public:
-    Cola(); hola hoal
+    Cola(); 
     ~Cola();
 
 };
