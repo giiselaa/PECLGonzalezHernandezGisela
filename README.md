@@ -1,2 +1,3 @@
-# proyecto_eedd
-Repositorio para las pl
+# PECL
+Gisela González Hernández y Achraf EL Idrissi
+Repositorio para la PECL
