@@ -5,7 +5,7 @@
 class Cola
 {
 public:
-<<<<<<< HEAD
+<<<<<<< HEAD adiosss
     Cola();
 =======
     Cola(); 
