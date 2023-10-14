@@ -1,12 +1,17 @@
-#ifndef PILA_HPP
-#define PILA_HPP
+#include "NodoPila.hpp"
 
 class Pila
 {
 public:
     Pila();
     ~Pila();
-
-};
-
-#endif // PILA_HPP
+    void insertar(Pedido v);
+    int extraer();
+    int cima();
+    void mostrar();
+    int getLongitud();
+    
+private:
+    pnodoPila ultimo;
+    int longitud;
+};s
