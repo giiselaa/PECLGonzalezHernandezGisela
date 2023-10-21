@@ -11,7 +11,7 @@ int main(int argc, char** argv)
 
         cout << "\n\t--------------------------------------------------------------"
                 "--------\n";
-        cout << "\tPedidos en la pila -> " << 0 /*gestor.PedidosEnPila()*/
+        cout << "\tPedidos en la pila -> " << gestor.longitudPila()
              << "\n\tPedidos en las colas:\n \t\tSala A-> " << 0 /*gestor.PedidosEnSalaA() */ << "\tSala B-> "
              << 0 /*gestor.PedidosEnSalaB() */ << "\tSala C-> " << 0 /*gestor.PedidosEnSalaC() */ << "\tSala D-> "
              << 0 /*gestor.PedidosEnSalaD()*/
@@ -66,10 +66,10 @@ int main(int argc, char** argv)
         switch(opcion) {
 
         case 'A':
-            // gestor.genera12Pedidos();
+             gestor.generarPedidosAleatorios(12);
             break;
         case 'B':
-            // gestor.muestraPedidos();
+             gestor.mostrarPedidosEnPila();
             break;
         case 'C':
             // gestor.borraPedidosPila();

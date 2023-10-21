@@ -1,5 +1,7 @@
-
 #include "NodoCola.hpp"
+#include <iostream>
+using namespace std;
+
 class Cola
 {
 public:
@@ -8,10 +10,10 @@ public:
     
     ~Cola();
     
-    void isertar(int v);
-    int eliminar();
+    void insertar(Pedido pedido);
+    Pedido eliminar();
     void mostrar();
-    int verPrimero();
+    Pedido verPrimero();
     
 private:
     pnodoCola primero, ultimo;

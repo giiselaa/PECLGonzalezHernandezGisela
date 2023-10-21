@@ -12,12 +12,12 @@ void Pila::insertar(Pedido pedido)
     ultimo = nuevo;
     longitud++;
 }
-int Pila::extraer()
+Pedido Pila::extraer()
 {
     pnodoPila nodo;
-    int pedido;
+    Pedido pedido;
     if(!ultimo)
-        return 0;
+        return Pedido();
     nodo = ultimo;
     ultimo = nodo->siguiente;
     pedido = nodo ->valor;
@@ -25,22 +25,22 @@ int Pila::extraer()
     delete nodo;
     return pedido;
 }
-int Pila::cima()
+Pedido Pila::cima()
 {
     pnodoPila nodo;
     if(!ultimo)
-        return 0;
+        return Pedido();
     return ultimo->valor;
 }
 void Pila::mostrar()
 {
     pnodoPila aux = ultimo;
-    cout << "\tEl contenido de la pila es: ";
+    std::cout << "\tEl contenido de la pila es: " << std::endl;
     while(aux){
-        cout << "-> " << aux->valor;
+        aux->valor.mostrar();
         aux = aux->siguiente;
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 int Pila::getLongitud()
 {

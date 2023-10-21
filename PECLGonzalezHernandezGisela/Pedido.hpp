@@ -7,11 +7,9 @@ class Pedido
 {
 public:
     Pedido();
-    
-    ~Pedido();
-    
-    bool esUrgente();
+    bool esUrgenteP();
     void mostrar();
+    ~Pedido();
     
 private:
     char DNI[10];
@@ -20,7 +18,7 @@ private:
     int numSeg;
     
     void generarDNI();
-    void generarId();
-    void generarNumSeg();
+    void generarId(bool);
+    void generarNumSeg(bool);
 };
 

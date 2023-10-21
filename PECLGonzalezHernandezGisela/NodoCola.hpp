@@ -1,15 +1,15 @@
 #ifndef NODOCOLA_HPP
 #define NODOCOLA_HPP
-
+#include "pedido.hpp"
 class NodoCola
 {
 public:
-    NodoCola(int v, NodoCola*sig=NULL);
+    NodoCola(Pedido pedido, NodoCola*sig=NULL);
     ~NodoCola();
     
     
 private:
-    int valor;
+    Pedido valor;
     NodoCola* siguiente;
     
     friend class Cola;

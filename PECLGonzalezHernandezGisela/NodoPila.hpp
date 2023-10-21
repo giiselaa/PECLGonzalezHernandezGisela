@@ -1,14 +1,15 @@
 #include <iostream>
+#include "Pedido.hpp"
 using namespace std;
 
 class NodoPila
 {
 public:
-    NodoPila(int v, NodoPila* sig = NULL);
+    NodoPila(Pedido pedido, NodoPila* sig = NULL);
     ~NodoPila();
     
 private:
-    int valor;
+    Pedido valor;
     NodoPila* siguiente;
     friend class Pila;
 };

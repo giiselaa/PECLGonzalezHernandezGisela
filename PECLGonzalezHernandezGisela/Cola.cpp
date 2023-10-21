@@ -1,4 +1,5 @@
 #include "Cola.hpp"
+#include <cstddef>
 
 Cola::Cola()
 {
@@ -7,10 +8,10 @@ Cola::Cola()
     longitud = 0;
 }
 
-void Cola::insertar(int v)
+void Cola::insertar(Pedido pedido)
 {
     pnodoCola nuevo;
-    nuevo = new NodoCola(v);
+    nuevo = new NodoCola(pedido);
     if(ultimo)
         ultimo ->siguiente = nuevo;
     
@@ -18,36 +19,39 @@ void Cola::insertar(int v)
     
     if(!primero)
         primero = nuevo;
-    logitud++;
+    longitud++;
 }
 void Cola::mostrar()
 {
     pnodoCola aux = primero;
-    cout<< "\tEl contenido de la cola es: ";
+    std::cout<< "\tEl contenido de la cola es: ";
     while (aux){
-        cout << "->"<< aux->valor;
+        aux->valor.mostrar();
         aux = aux->siguiente;
     }
-    cout << endl;
+    std::cout << std::endl;
 }
 
-int Cola::eliminar()
+Pedido Cola::eliminar()
 {
     pnodoCola nodo;
-    int v;
+    Pedido pedido;
     nodo = primero;
-    if(!nodo)
-        return 0;
+    if(!nodo){
+        return Pedido();
+    }
+
         primero = nodo->siguiente;
-        v = nodo->valor;
+        pedido = nodo->valor;
         delete nodo;
-        if(!primero)
+        if(!primero){
             ultimo = NULL;
+        }
         longitud--;
-        return v;
+        return pedido;
 }
 
-int Cola::verPrimero()
+Pedido Cola::verPrimero()
 {
     return primero->valor;
 }
