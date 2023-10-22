@@ -75,7 +75,7 @@ int main(int argc, char** argv)
              gestor.borrarPedidosPila();
             break;
         case 'D':
-             //gestor.encolarPedidos();
+             gestor.encolarPedidos();
             break;
         case 'E':
             // gestor.muestraPedidosSalasAyB();

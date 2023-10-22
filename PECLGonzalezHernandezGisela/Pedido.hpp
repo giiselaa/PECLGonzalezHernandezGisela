@@ -7,9 +7,10 @@ class Pedido
 {
 public:
     Pedido();
+   ~Pedido();
+   
     bool esUrgenteP();
     void mostrar();
-    ~Pedido();
     
 private:
     char DNI[10];
@@ -21,4 +22,3 @@ private:
     void generarId(bool);
     void generarNumSeg(bool);
 };
-

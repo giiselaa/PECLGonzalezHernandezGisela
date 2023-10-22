@@ -37,15 +37,28 @@ void Gestor::borrarPedidosPila()
     }
 }
 
-/*
+
 void Gestor :: encolarPedidos()
 {
-    //codigo extrae de la pila y los encola en la estación
     while ((pila.getLongitud()) > 0) {
         Pedido pedido = pila.extraer();
+        if (!pedido.esUrgenteP()){ //si no es urgente a A o B
+            if (colaA.getLongitud() < colaB.getLongitud()){
+                colaA.insertar(pedido);
+            }else{
+                colaB.insertar(pedido);
+            }
+        }else{ // si es urgente a B o C
+            if (colaC.getLongitud() < colaD.getLongitud()){
+                colaC.insertar(pedido);
+            }else{
+                colaD.insertar(pedido);
+            }
+        }
+            
     }
 }
- */
+
 
 Gestor::~Gestor()
 {
