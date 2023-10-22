@@ -82,3 +82,5 @@ int Gestor :: pedidosEnSalaD()
 Gestor::~Gestor()
 {
 }
+
+
