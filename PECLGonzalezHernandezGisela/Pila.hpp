@@ -13,6 +13,7 @@ public:
     Pedido extraer();
     Pedido cima();
     void mostrar();
+    void desapilar();
     int getLongitud();
     
 private:

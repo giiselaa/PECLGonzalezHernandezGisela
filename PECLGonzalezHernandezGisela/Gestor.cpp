@@ -5,7 +5,8 @@ Gestor::Gestor()
     maxPedidos = 0;
 }
 
-void Gestor::generarPedidosAleatorios(int cantidad) {
+void Gestor::generarPedidosAleatorios(int cantidad) 
+{
     if  (maxPedidos<4){
     for (int i = 0; i < cantidad; i++) {
         Pedido nuevoPedido;
@@ -19,11 +20,20 @@ void Gestor::generarPedidosAleatorios(int cantidad) {
     }
 }
 
-void Gestor::mostrarPedidosEnPila() {
+void Gestor::mostrarPedidosEnPila() 
+{
     pila.mostrar();
 }
 
-int Gestor::longitudPila(){
+void Gestor::borrarPedidosPila()
+{
+    while((pila.getLongitud()) > 0){
+        pila.desapilar();
+    }
+}
+
+int Gestor::longitudPila()
+{
     return this -> pila.getLongitud();
 }
 Gestor::~Gestor()

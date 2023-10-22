@@ -5,6 +5,8 @@ Pila::Pila()
     ultimo = NULL;
     longitud = 0;
 }
+
+
 void Pila::insertar(Pedido pedido)
 {
     pnodoPila nuevo;
@@ -12,6 +14,8 @@ void Pila::insertar(Pedido pedido)
     ultimo = nuevo;
     longitud++;
 }
+
+
 Pedido Pila::extraer()
 {
     pnodoPila nodo;
@@ -25,13 +29,16 @@ Pedido Pila::extraer()
     delete nodo;
     return pedido;
 }
+
+
 Pedido Pila::cima()
 {
-    pnodoPila nodo;
     if(!ultimo)
         return Pedido();
     return ultimo->valor;
 }
+
+
 void Pila::mostrar()
 {
     pnodoPila aux = ultimo;
@@ -42,10 +49,24 @@ void Pila::mostrar()
     }
     std::cout << std::endl;
 }
+
+
+void Pila::desapilar()
+{
+    pnodoPila nodo;
+    nodo = ultimo;
+    ultimo = nodo -> siguiente;
+    longitud--;
+    delete nodo; 
+}
+
+
 int Pila::getLongitud()
 {
     return this->longitud;
 }
+
+
 Pila::~Pila()
 {
     pnodoPila aux;

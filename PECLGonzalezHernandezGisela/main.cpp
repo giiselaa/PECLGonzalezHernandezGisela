@@ -72,7 +72,7 @@ int main(int argc, char** argv)
              gestor.mostrarPedidosEnPila();
             break;
         case 'C':
-            // gestor.borraPedidosPila();
+             gestor.borrarPedidosPila();
             break;
         case 'D':
             // gestor.encolarPedidos();
