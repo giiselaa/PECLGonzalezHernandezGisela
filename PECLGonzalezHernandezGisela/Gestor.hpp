@@ -13,6 +13,10 @@ public:
     void borrarPedidosPila();
     void encolarPedidos();
     int longitudPila();
+    int pedidosEnSalaA();
+    int pedidosEnSalaB();
+    int pedidosEnSalaC();
+    int pedidosEnSalaD();
     ~Gestor();
     
 private:

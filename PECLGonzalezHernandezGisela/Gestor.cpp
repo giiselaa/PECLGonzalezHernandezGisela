@@ -59,6 +59,25 @@ void Gestor :: encolarPedidos()
     }
 }
 
+int Gestor :: pedidosEnSalaA()
+{
+   return colaA.getLongitud();
+}
+
+int Gestor :: pedidosEnSalaB()
+{
+    return colaB.getLongitud();
+}
+
+int Gestor :: pedidosEnSalaC()
+{
+    return colaC.getLongitud();
+}
+
+int Gestor :: pedidosEnSalaD()
+{
+    return colaD.getLongitud();
+}
 
 Gestor::~Gestor()
 {
