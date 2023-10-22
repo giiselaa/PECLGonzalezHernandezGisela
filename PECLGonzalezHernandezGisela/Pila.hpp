@@ -1,3 +1,5 @@
+#ifndef PILA_HPP
+#define PILA_HPP
 #include "NodoPila.hpp"
 #include <iostream>
 
@@ -20,3 +22,5 @@ private:
     pnodoPila ultimo;
     int longitud;
 };
+
+#endif

@@ -1,6 +1,7 @@
+#ifndef PEDIDO_HPP
+#define PEDIDO_HPP
 #include <iostream>
 #include <iomanip>
-
 using namespace std;
 
 class Pedido
@@ -22,3 +23,6 @@ private:
     void generarId(bool);
     void generarNumSeg(bool);
 };
+
+
+#endif

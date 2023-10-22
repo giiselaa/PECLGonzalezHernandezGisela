@@ -1,3 +1,5 @@
+#ifndef COLA_HPP
+#define COLA_HPP
 #include "NodoCola.hpp"
 #include <iostream>
 using namespace std;
@@ -21,3 +23,4 @@ private:
     int longitud;
 };
 
+#endif

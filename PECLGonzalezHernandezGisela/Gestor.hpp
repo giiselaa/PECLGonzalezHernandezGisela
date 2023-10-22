@@ -1,3 +1,5 @@
+#ifndef GESTOR_HPP
+#define GESTOR_HPP
 #include "Pila.hpp"
 #include "Cola.hpp"
 
@@ -23,3 +25,4 @@ private:
     Cola colaD;
 };
 
+#endif

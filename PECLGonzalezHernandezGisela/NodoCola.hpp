@@ -1,6 +1,6 @@
 #ifndef NODOCOLA_HPP
 #define NODOCOLA_HPP
-#include "pedido.hpp"
+#include "Pedido.hpp"
 class NodoCola
 {
 public:
