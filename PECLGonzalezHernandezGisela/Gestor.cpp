@@ -47,6 +47,6 @@ void Gestor :: encolarPedidos()
 }
  */
 
-intestor::~Gestor()
+Gestor::~Gestor()
 {
 }
