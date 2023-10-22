@@ -25,17 +25,28 @@ void Gestor::mostrarPedidosEnPila()
     pila.mostrar();
 }
 
-void Gestor::borrarPedidosPila()
-{
-    while((pila.getLongitud()) > 0){
-        pila.desapilar();
-    }
-}
-
 int Gestor::longitudPila()
 {
     return this -> pila.getLongitud();
 }
-Gestor::~Gestor()
+
+void Gestor::borrarPedidosPila()
+{
+    while((pila.getLongitud()) > 0) {
+        pila.desapilar();
+    }
+}
+
+/*
+void Gestor :: encolarPedidos()
+{
+    //codigo extrae de la pila y los encola en la estación
+    while ((pila.getLongitud()) > 0) {
+        Pedido pedido = pila.extraer();
+    }
+}
+ */
+
+intestor::~Gestor()
 {
 }

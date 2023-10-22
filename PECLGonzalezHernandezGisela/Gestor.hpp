@@ -7,6 +7,7 @@ public:
     void generarPedidosAleatorios(int cantidad);
     void mostrarPedidosEnPila();
     void borrarPedidosPila();
+    //void encolarPedidos();
     int longitudPila();
     ~Gestor();
     

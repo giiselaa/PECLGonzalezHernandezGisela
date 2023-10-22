@@ -4,15 +4,22 @@
   <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.cpp" Name="FileName"/>
-      <int Value="3" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\main.cpp" Name="FileName"/>
+      <int Value="54" Name="FirstVisibleLine"/>
+      <int Value="77" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
+      <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.cpp" Name="FileName"/>
+      <int Value="18" Name="FirstVisibleLine"/>
+      <int Value="47" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Pila.cpp" Name="FileName"/>
+      <int Value="12" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
@@ -20,21 +27,7 @@
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.hpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Pila.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
-      <wxString Value="C:\Users\giise\Documents\Curso 2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Pila.hpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="9" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
