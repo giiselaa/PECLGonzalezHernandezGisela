@@ -51,7 +51,7 @@ void Pedido::mostrar()
     string urgencia = "estandar ";
     if(esUrgente)
         urgencia = "urgente";
-    std::cout << "\t" << setw(10) << " El pedido " << id << " que pertenece a el DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << std:: endl;
+    cout << "\t" << setw(10) << " El pedido " << id << " que pertenece a el DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
 }
 
 Pedido::~Pedido()

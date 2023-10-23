@@ -24,12 +24,12 @@ void Cola::insertar(Pedido pedido)
 void Cola::mostrar()
 {
     pnodoCola aux = primero;
-    std::cout<< "\tEl contenido de la cola es: ";
+    cout<<"\t"<<" El contenido de la cola es: " << endl;
     while (aux){
         aux->valor.mostrar();
         aux = aux->siguiente;
     }
-    std::cout << std::endl;
+    cout <<endl;
 }
 
 Pedido Cola::eliminar()

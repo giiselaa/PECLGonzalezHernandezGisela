@@ -78,13 +78,13 @@ int main(int argc, char** argv)
              gestor.encolarPedidos();
             break;
         case 'E':
-            // gestor.muestraPedidosSalasAyB();
+              gestor.muestraPedidosSalasAyB();
             break;
         case 'F':
-            // gestor.muestraPedidosSalasCyD();
+              gestor.muestraPedidosSalasCyD();
             break;
         case 'G':
-            // gestor.borraPedidosColas();
+              gestor.borraPedidosColas();
             break;
         case 'H':
             // gestor.enlistarPedidos();

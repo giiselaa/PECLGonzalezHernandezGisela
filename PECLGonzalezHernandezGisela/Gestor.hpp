@@ -12,6 +12,9 @@ public:
     void mostrarPedidosEnPila();
     void borrarPedidosPila();
     void encolarPedidos();
+    void muestraPedidosSalasAyB();
+    void muestraPedidosSalasCyD();
+    void borraPedidosColas();
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();
@@ -22,7 +25,6 @@ public:
 private:
     Pila pila;
     int maxPedidos;
-    
     Cola colaA;
     Cola colaB;
     Cola colaC;

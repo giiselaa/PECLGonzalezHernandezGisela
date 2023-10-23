@@ -7,13 +7,13 @@ Gestor::Gestor()
 
 void Gestor::generarPedidosAleatorios(int cantidad) 
 {
-    if  (maxPedidos<4){
+    if  (maxPedidos<48){
     for (int i = 0; i < cantidad; i++) {
         Pedido nuevoPedido;
         pila.insertar(nuevoPedido);
+        maxPedidos++;
     }
     cout << "Se generaron y almacenaron " << cantidad << " pedidos aleatorios en la pila.\n";
-    maxPedidos++;
     }
     else{
     cout << "Has generado el numero maximo de pedidos";
@@ -35,6 +35,7 @@ void Gestor::borrarPedidosPila()
     while((pila.getLongitud()) > 0) {
         pila.desapilar();
     }
+    maxPedidos=0;
 }
 
 
@@ -78,6 +79,36 @@ int Gestor :: pedidosEnSalaD()
 {
     return colaD.getLongitud();
 }
+
+void Gestor::muestraPedidosSalasAyB(){
+     colaA.mostrar();
+     colaB.mostrar();
+}
+
+void Gestor::muestraPedidosSalasCyD(){
+    colaC.mostrar();
+    colaD.mostrar();
+
+}
+
+void Gestor::borraPedidosColas(){
+  while(colaA.getLongitud()>0){
+      colaA.eliminar();
+      }
+  while(colaB.getLongitud()>0){
+      colaB.eliminar();
+      }
+  while(colaC.getLongitud()>0){
+      colaC.eliminar();
+      }
+  while(colaD.getLongitud()>0){
+      colaD.eliminar();
+      }
+    maxPedidos=0;
+    }
+
+
+
 
 Gestor::~Gestor()
 {
