@@ -44,13 +44,13 @@ void Gestor :: encolarPedidos()
     while ((pila.getLongitud()) > 0) {
         Pedido pedido = pila.extraer();
         if (!pedido.esUrgenteP()){ //si no es urgente a A o B
-            if (colaA.getLongitud() < colaB.getLongitud()){
+            if (colaA.getLongitud() =< colaB.getLongitud()){
                 colaA.insertar(pedido);
             }else{
                 colaB.insertar(pedido);
             }
         }else{ // si es urgente a B o C
-            if (colaC.getLongitud() < colaD.getLongitud()){
+            if (colaC.getLongitud() =< colaD.getLongitud()){
                 colaC.insertar(pedido);
             }else{
                 colaD.insertar(pedido);
@@ -106,10 +106,38 @@ void Gestor::borraPedidosColas(){
       }
     maxPedidos=0;
     }
+//falla
+void Gestor::enlistarPedidos(){
+    
+    while(colaA.getLongitud()>0){
+        pedido = colaA.extraer();
+        estandar.insertarEnOrden(pedido);
+        colaA.eliminar()
+    }
+        while(colaB.getLongitud()>0){
+        pedido = colaB.extraer();
+        estandar.insertarEnOrden(pedido);
+        colaB.eliminar()
+    }
+        while(colaC.getLongitud()>0){
+        pedido = colaC.extraer();
+        urgente.insertarEnOrden(pedido);
+        colaC.eliminar()
+    }
+        while(colaD.getLongitud()>0){
+        pedido = colaD.extraer();
+        urgente.insertarEnOrden(pedido);
+        colaD.eliminar()
+    }
+}
 
+int Gestor:: pedidosEnListaEstandar(){
+    return estandar.getLongitud();
+}
 
-
-
+int Gestor::pedidosEnListaUrgentes(){
+    return urgente.getLongitud();
+}
 Gestor::~Gestor()
 {
 }

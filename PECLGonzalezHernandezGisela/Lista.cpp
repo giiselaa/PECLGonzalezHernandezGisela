@@ -37,9 +37,9 @@ void Lista::mostrar()
     }
     cout <<endl;
 }
-//revisar funcion
-void Lista::insertarEnOrden(Pedido pedido, Lista l) {
-    pnodoLista nodo = new NodoLista(pedido, ultimo);
+//falla
+void Lista::insertarEnOrden(Pedido pedido) {
+    pnodoLista nodo = new NodoLista(pedido);
     
     if (!primero || pedido.id < primero->valor.id) {
         nodo->siguiente = primero;

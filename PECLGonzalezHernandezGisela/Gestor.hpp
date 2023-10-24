@@ -20,6 +20,7 @@ public:
     int pedidosEnSalaB();
     int pedidosEnSalaC();
     int pedidosEnSalaD();
+    void enlistarPedidos();
     ~Gestor();
     
 private:
@@ -29,6 +30,8 @@ private:
     Cola colaB;
     Cola colaC;
     Cola colaD;
+    Lista estandar;
+    Lista urgente;
 };
 
 #endif
