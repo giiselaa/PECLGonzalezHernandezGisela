@@ -110,24 +110,20 @@ void Gestor::borraPedidosColas(){
 void Gestor::enlistarPedidos(){
     
     while(colaA.getLongitud()>0){
-        pedido = colaA.extraer();
+        Pedido pedido = colaA.extraer();
         estandar.insertarEnOrden(pedido);
-        colaA.eliminar()
     }
         while(colaB.getLongitud()>0){
-        pedido = colaB.extraer();
+        Pedido pedido = colaB.extraer();
         estandar.insertarEnOrden(pedido);
-        colaB.eliminar()
     }
         while(colaC.getLongitud()>0){
-        pedido = colaC.extraer();
+        Pedido pedido = colaC.extraer();
         urgente.insertarEnOrden(pedido);
-        colaC.eliminar()
     }
         while(colaD.getLongitud()>0){
-        pedido = colaD.extraer();
+        Pedido pedido = colaA.extraer();
         urgente.insertarEnOrden(pedido);
-        colaD.eliminar()
     }
 }
 

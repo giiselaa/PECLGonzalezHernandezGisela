@@ -63,6 +63,7 @@ int Lista::getLongitud()
 
 Lista::~Lista()
 {
-    
+    while(primero)
+        resto();
 }
 
