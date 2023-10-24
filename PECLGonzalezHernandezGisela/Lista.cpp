@@ -38,21 +38,21 @@ void Lista::mostrar()
     cout <<endl;
 }
 //revisar funcion
-void Lista::insertarEnOrden(Pedido pedido, Lista l){
-    pnodoLista nodo;
+void Lista::insertarEnOrden(Pedido pedido, Lista l) {
+    pnodoLista nodo = new NodoLista(pedido, ultimo);
     
-    if(!primero || pedido.ID < primero->valor.ID){
-        nodo ->siguiente = primero;
+    if (!primero || pedido.id < primero->valor.id) {
+        nodo->siguiente = primero;
         primero = nodo;
-    }else{
-        nodoLista actual = primero;
-        
-        while(actual->siguiente && pedido.ID >= actual->siguiente->valor.ID){
-            actual = actual -> siguiente;
+    } else {
+        pnodoLista actual = primero;
+
+        while (actual->siguiente && pedido.id >= actual->siguiente->valor.id) {
+            actual = actual->siguiente;
         }
-        
+
         nodo->siguiente = actual->siguiente;
-        actual->siguiente = nodo
+        actual->siguiente = nodo;
     }
 }
 
