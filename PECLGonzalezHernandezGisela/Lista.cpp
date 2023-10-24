@@ -37,17 +37,19 @@ void Lista::mostrar()
     }
     cout <<endl;
 }
-//falla
-void Lista::insertarEnOrden(Pedido pedido) {
-    pnodoLista nodo = new NodoLista(pedido);
+
+void Lista::insertarEnOrden(Pedido pedido) 
+{
+    pnodoLista nodo;
+    nodo = new NodoLista(pedido);
     
-    if (!primero || pedido.id < primero->valor.id) {
-        nodo->siguiente = primero;
-        primero = nodo;
-    } else {
+    if (!primero || pedido.getId() < primero->valor.getId()){
+        primero = nodo;        
+        nodo->siguiente = primero;   
+    }else {
         pnodoLista actual = primero;
 
-        while (actual->siguiente && pedido.id >= actual->siguiente->valor.id) {
+        while (actual->siguiente && pedido.getId() >= actual->siguiente->valor.getId()) {
             actual = actual->siguiente;
         }
 

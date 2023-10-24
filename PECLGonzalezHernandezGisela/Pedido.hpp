@@ -22,6 +22,7 @@ private:
     void generarDNI();
     void generarId(bool);
     void generarNumSeg(bool);
+    int getId();
 };
 
 

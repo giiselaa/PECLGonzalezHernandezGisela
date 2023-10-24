@@ -106,34 +106,39 @@ void Gestor::borraPedidosColas(){
       }
     maxPedidos=0;
     }
-//falla
+
 void Gestor::enlistarPedidos(){
     
+    Pedido pedido;
+    
     while(colaA.getLongitud()>0){
-        Pedido pedido = colaA.extraer();
+        pedido = colaA.extraer();
         estandar.insertarEnOrden(pedido);
     }
         while(colaB.getLongitud()>0){
-        Pedido pedido = colaB.extraer();
+        pedido = colaB.extraer();
         estandar.insertarEnOrden(pedido);
     }
         while(colaC.getLongitud()>0){
-        Pedido pedido = colaC.extraer();
+        pedido = colaC.extraer();
         urgente.insertarEnOrden(pedido);
     }
         while(colaD.getLongitud()>0){
-        Pedido pedido = colaA.extraer();
+        pedido = colaA.extraer();
         urgente.insertarEnOrden(pedido);
     }
 }
 
-int Gestor:: pedidosEnListaEstandar(){
+int Gestor::pedidosEnListaEstandar()
+{
     return estandar.getLongitud();
 }
 
-int Gestor::pedidosEnListaUrgentes(){
+int Gestor::pedidosEnListaUrgentes()
+{
     return urgente.getLongitud();
 }
+
 Gestor::~Gestor()
 {
 }

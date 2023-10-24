@@ -45,6 +45,11 @@ bool Pedido::esUrgenteP()
 {
     return this->esUrgente;
 }
+//???
+int Pedido::getId()
+{
+    return this->id;
+}
 
 void Pedido::mostrar()
 {
