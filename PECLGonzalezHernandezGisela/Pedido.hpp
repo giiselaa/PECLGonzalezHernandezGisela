@@ -12,7 +12,7 @@ public:
    
     bool esUrgenteP();
     void mostrar();
-    
+    int getId();
 private:
     char DNI[10];
     bool esUrgente;
@@ -22,7 +22,7 @@ private:
     void generarDNI();
     void generarId(bool);
     void generarNumSeg(bool);
-    int getId();
+    
 };
 
 

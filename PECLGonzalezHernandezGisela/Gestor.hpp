@@ -2,6 +2,7 @@
 #define GESTOR_HPP
 #include "Pila.hpp"
 #include "Cola.hpp"
+#include "Lista.hpp"
 
 class Gestor
 {
@@ -15,12 +16,17 @@ public:
     void muestraPedidosSalasAyB();
     void muestraPedidosSalasCyD();
     void borraPedidosColas();
+    void enlistarPedidos();
+    void muestraPedidosEstandar();
+    void muestraPedidosUrgentes();
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();
     int pedidosEnSalaC();
     int pedidosEnSalaD();
-    void enlistarPedidos();
+    int pedidosEnListaEstandar();
+    int pedidosEnListaUrgentes();
+    
     ~Gestor();
     
 private:

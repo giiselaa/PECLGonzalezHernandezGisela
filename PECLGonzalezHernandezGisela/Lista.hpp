@@ -1,6 +1,5 @@
 #ifndef LISTA_HPP
 #define LISTA_HPP
-
 #include "NodoLista.hpp"
 #include <iostream>
 
@@ -15,7 +14,7 @@ public:
     Pedido resto();
     void mostrar();
     int getLongitud();
-    void insertarEnOrden();
+    void insertarEnOrden(Pedido pedido);
     
         
 private:

@@ -44,13 +44,13 @@ void Gestor :: encolarPedidos()
     while ((pila.getLongitud()) > 0) {
         Pedido pedido = pila.extraer();
         if (!pedido.esUrgenteP()){ //si no es urgente a A o B
-            if (colaA.getLongitud() =< colaB.getLongitud()){
+            if (colaA.getLongitud() <= colaB.getLongitud()){
                 colaA.insertar(pedido);
             }else{
                 colaB.insertar(pedido);
             }
         }else{ // si es urgente a B o C
-            if (colaC.getLongitud() =< colaD.getLongitud()){
+            if (colaC.getLongitud() <= colaD.getLongitud()){
                 colaC.insertar(pedido);
             }else{
                 colaD.insertar(pedido);
@@ -108,25 +108,25 @@ void Gestor::borraPedidosColas(){
     }
 
 void Gestor::enlistarPedidos(){
-    
     Pedido pedido;
     
     while(colaA.getLongitud()>0){
         pedido = colaA.extraer();
         estandar.insertarEnOrden(pedido);
     }
-        while(colaB.getLongitud()>0){
+     while(colaB.getLongitud()>0){
         pedido = colaB.extraer();
         estandar.insertarEnOrden(pedido);
     }
-        while(colaC.getLongitud()>0){
+    while(colaC.getLongitud()>0){
         pedido = colaC.extraer();
         urgente.insertarEnOrden(pedido);
     }
-        while(colaD.getLongitud()>0){
-        pedido = colaA.extraer();
+    while(colaD.getLongitud()>0){
+        pedido = colaD.extraer();
         urgente.insertarEnOrden(pedido);
     }
+   
 }
 
 int Gestor::pedidosEnListaEstandar()
@@ -138,6 +138,17 @@ int Gestor::pedidosEnListaUrgentes()
 {
     return urgente.getLongitud();
 }
+
+void Gestor::muestraPedidosEstandar(){
+        estandar.mostrar();
+    }
+
+void Gestor::muestraPedidosUrgentes(){
+        urgente.mostrar();
+    }
+    
+
+
 
 Gestor::~Gestor()
 {

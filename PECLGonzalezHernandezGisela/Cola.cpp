@@ -60,7 +60,7 @@ Pedido Cola::extraer()
     }
     
     pnodoCola nodo = primero;
-    pedido = nodo->valor
+    pedido = nodo->valor;
     primero = nodo->siguiente;
     
     delete nodo;

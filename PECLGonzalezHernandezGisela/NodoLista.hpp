@@ -9,7 +9,7 @@ class NodoLista
 {
 public:
     NodoLista(Pedido pedido, NodoLista* sig = NULL);
-    ~NodoPila();
+    ~NodoLista();
     
 private:
     Pedido valor;
