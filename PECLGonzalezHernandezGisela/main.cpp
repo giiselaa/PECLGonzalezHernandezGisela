@@ -99,7 +99,7 @@ int main(int argc, char** argv)
             // gestor.buscarPedidos();
             break;
         case 'L':
-            // gestor.reiniciar();
+            gestor.reiniciar();
             break;
         case 'M':
             //...;

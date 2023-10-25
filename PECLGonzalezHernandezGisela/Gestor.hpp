@@ -19,6 +19,8 @@ public:
     void enlistarPedidos();
     void muestraPedidosEstandar();
     void muestraPedidosUrgentes();
+    void borraPedidosListas();
+    void reiniciar();
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();
