@@ -12,11 +12,12 @@ public:
     ~Lista();
     
     Pedido resto();
+    Pedido getPrimero();
+    Pedido getUltimo();
     void mostrar();
-    int getLongitud();
     void insertarEnOrden(Pedido pedido);
+    int getLongitud();
     
-        
 private:
     pnodoLista primero, ultimo; 
     int longitud;

@@ -96,7 +96,7 @@ int main(int argc, char** argv)
             gestor.muestraPedidosUrgentes();
             break;
         case 'K':
-            // gestor.buscarPedidos();
+            gestor.buscarPedidos();
             break;
         case 'L':
             gestor.reiniciar();

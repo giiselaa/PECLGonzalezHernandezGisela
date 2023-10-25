@@ -21,6 +21,7 @@ public:
     void muestraPedidosUrgentes();
     void borraPedidosListas();
     void reiniciar();
+    void buscarPedidos();
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();
@@ -40,6 +41,8 @@ private:
     Cola colaD;
     Lista estandar;
     Lista urgente;
+    Pedido pedidoE;
+    Pedido pedidoU;
 };
 
 #endif
