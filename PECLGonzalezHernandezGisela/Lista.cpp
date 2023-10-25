@@ -69,6 +69,21 @@ int Lista::getLongitud()
     return this->longitud;
 }
 
+Pedido Lista::getPrimero()
+{
+    return primero -> valor;
+}
+
+Pedido Lista::getUltimo()
+{
+    pnodoLista actual = primero;
+    while(actual){
+        ultimo = actual;
+        actual = actual->siguiente;
+    }
+    return ultimo->valor;
+}
+
 Lista::~Lista()
 {
     while(primero)

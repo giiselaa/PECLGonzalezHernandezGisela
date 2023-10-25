@@ -163,6 +163,14 @@ void Gestor::reiniciar(){
     
 }
 
+void Gestor::buscarPedidos(){
+    
+    pedidoE = estandar.getPrimero();
+    pedidoU = urgente.getUltimo();
+    
+    pedidoE.mostrar();
+    pedidoU.mostrar();
+}
 
 Gestor::~Gestor()
 {
