@@ -147,7 +147,7 @@ void Gestor::muestraPedidosUrgentes(){
         urgente.mostrar();
     }
     
-void borraPedidosListas(){
+void Gestor::borraPedidosListas(){
     while(estandar.getLongitud() > 0){
         estandar.resto();
     }
