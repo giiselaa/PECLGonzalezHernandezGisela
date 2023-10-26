@@ -45,7 +45,7 @@ int main(int argc, char** argv)
                 "por numero de seguimiento en orden ascendente.\n";
         cout << "\tP. Mostrar los datos de todos los Pedidos recorriendo el arbol "
                 "en inorden.\n";
-        cout << "\tQ. Buscar en el ABB el Pedido Estándar con el numero de "
+        cout << "\tQ. Buscar en el ABB el Pedido Estandar con el numero de "
                 "seguimiento mas alto y mas bajo, asi como los Pedidos Urgentes "
                 "con el numero de ID mas alto y mas bajo.\n";
         cout << "\tR. Contar el numero de Pedidos almacenados en el ABB cuyos "
