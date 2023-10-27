@@ -1,12 +1,13 @@
 #include "Pedido.hpp"
 #include <cstdlib>
+#define NULL 0
 
 Pedido::Pedido()
 {
     this->esUrgente = (rand() % 2); 
     this->generarDNI();
-    this->generarId( this->esUrgente);
-    this->generarNumSeg(this->esUrgente);
+    this->id = NULL;
+    this->numSeg = NULL;
 }
 
 void Pedido::generarDNI()
@@ -32,6 +33,15 @@ void Pedido::generarId(bool esUrgente)
     }
 }
 
+void Pedido::setNumSeg(){
+    this->generarNumSeg( this->esUrgente);
+    }
+
+void Pedido::setId(){
+    this->generarId( this->esUrgente);
+    }
+
+
 void Pedido::generarNumSeg(bool esUrgente)
 {
     if(esUrgente){
@@ -54,9 +64,14 @@ int Pedido::getId()
 void Pedido::mostrar()
 {
     string urgencia = "estandar ";
-    if(esUrgente)
+    if(esUrgente){
         urgencia = "urgente";
+    }
+    if(!id==NULL){
     cout << "\t" << setw(10) << " El pedido " << id << " que pertenece a el DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
+    }else{
+         cout << "\t" << setw(10) << " El pedido " << "que pertenece a el DNI " << DNI << " es de prioridad:" << urgencia << endl;
+    }
 }
 
 Pedido::~Pedido()

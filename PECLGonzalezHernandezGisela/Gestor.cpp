@@ -43,6 +43,8 @@ void Gestor :: encolarPedidos()
 {
     while ((pila.getLongitud()) > 0) {
         Pedido pedido = pila.extraer();
+        pedido.setNumSeg();
+        pedido.setId();
         if (!pedido.esUrgenteP()){ //si no es urgente a A o B
             if (colaA.getLongitud() <= colaB.getLongitud()){
                 colaA.insertar(pedido);
