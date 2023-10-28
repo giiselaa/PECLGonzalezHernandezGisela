@@ -25,7 +25,6 @@ void Pedido::generarDNI()
 
 void Pedido::generarId(bool esUrgente)
 {
-    int tamanoArray = 0;
     bool existe = false;
     
     if(esUrgente){
@@ -34,16 +33,16 @@ void Pedido::generarId(bool esUrgente)
         id = (rand() % 49) + 1;
     }
     
-    for (int i = 0; i < tamanoArray; i++) {
+    for (int i = 0; i < tamanoArrayId; i++) {
         if (id == arrayId[i]) {
             existe = true;
         }
     }
     
      if (!existe) {
-        if (tamanoArray < 48) {
-            arrayId[tamanoArray] = id;
-            tamanoArray++;
+        if (tamanoArrayId < 48) {
+            arrayId[tamanoArrayId] = id;
+            tamanoArrayId++;
         }
     }
 }
@@ -59,7 +58,6 @@ void Pedido::setId(){
 
 void Pedido::generarNumSeg(bool esUrgente)
 {
-    int tamanoArray = 0;
     bool existe = false;
     
     if(esUrgente){
@@ -68,16 +66,16 @@ void Pedido::generarNumSeg(bool esUrgente)
         numSeg = (rand() % 499) + 1;
     }
     
-    for (int i = 0; i < tamanoArray; i++) {
-        if (id == arraySeg[i]) {
+    for (int i = 0; i < tamanoArraySeg; i++) {
+        if (numSeg == arraySeg[i]) {
             existe = true;
         }
     }
     
      if (!existe) {
-        if (tamanoArray < 48) {
-            arraySeg[tamanoArray] = id;
-            tamanoArray++;
+        if (tamanoArraySeg < 48) {
+            arraySeg[tamanoArraySeg] = numSeg;
+            tamanoArraySeg++;
         }
      }
 }
@@ -99,9 +97,9 @@ void Pedido::mostrar()
         urgencia = "urgente";
     }
     if(!id==0){
-    cout << "\t" << setw(10) << " El pedido " << id << " que pertenece a el DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
+    cout << "\t" << setw(10) << " El pedido " << id << " que pertenece al DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
     }else{
-         cout << "\t" << setw(10) << " El pedido " << "que pertenece a el DNI " << DNI << " es de prioridad:" << urgencia << endl;
+         cout << "\t" << setw(10) << " El pedido " << "que pertenece al DNI " << DNI << " es de prioridad:" << urgencia << endl;
     }
 }
 
