@@ -1,13 +1,12 @@
 #include "Pedido.hpp"
 #include <cstdlib>
-#define NULL 0
 
 Pedido::Pedido()
 {
     this->esUrgente = (rand() % 2); 
     this->generarDNI();
-    this->id = NULL;
-    this->numSeg = NULL;
+    this->id = 0;
+    this->numSeg = 0;
 }
 
 void Pedido::generarDNI()
@@ -26,10 +25,26 @@ void Pedido::generarDNI()
 
 void Pedido::generarId(bool esUrgente)
 {
+    int tamanoArray = 0;
+    bool existe = false;
+    
     if(esUrgente){
         id = (rand() % 49) + 51;
     }else{
         id = (rand() % 49) + 1;
+    }
+    
+    for (int i = 0; i < tamanoArray; i++) {
+        if (id == arrayId[i]) {
+            existe = true;
+        }
+    }
+    
+     if (!existe) {
+        if (tamanoArray < 48) {
+            arrayId[tamanoArray] = id;
+            tamanoArray++;
+        }
     }
 }
 
@@ -44,18 +59,34 @@ void Pedido::setId(){
 
 void Pedido::generarNumSeg(bool esUrgente)
 {
+    int tamanoArray = 0;
+    bool existe = false;
+    
     if(esUrgente){
         numSeg = (rand() % 499) + 501;
     }else{
         numSeg = (rand() % 499) + 1;
     }
+    
+    for (int i = 0; i < tamanoArray; i++) {
+        if (id == arraySeg[i]) {
+            existe = true;
+        }
+    }
+    
+     if (!existe) {
+        if (tamanoArray < 48) {
+            arraySeg[tamanoArray] = id;
+            tamanoArray++;
+        }
+     }
 }
 
 bool Pedido::esUrgenteP()
 {
     return this->esUrgente;
 }
-//???
+
 int Pedido::getId()
 {
     return this->id;
@@ -67,7 +98,7 @@ void Pedido::mostrar()
     if(esUrgente){
         urgencia = "urgente";
     }
-    if(!id==NULL){
+    if(!id==0){
     cout << "\t" << setw(10) << " El pedido " << id << " que pertenece a el DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
     }else{
          cout << "\t" << setw(10) << " El pedido " << "que pertenece a el DNI " << DNI << " es de prioridad:" << urgencia << endl;

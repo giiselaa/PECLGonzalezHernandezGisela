@@ -20,6 +20,8 @@ private:
     bool esUrgente;
     int id;
     int numSeg;
+    int arrayId[48];
+    int arraySeg[48];
     
     void generarDNI();
     void generarId(bool);
