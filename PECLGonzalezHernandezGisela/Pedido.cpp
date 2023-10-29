@@ -1,13 +1,12 @@
 #include "Pedido.hpp"
 #include <cstdlib>
-#define NULL 0
 
 Pedido::Pedido()
 {
     this->esUrgente = (rand() % 2); 
     this->generarDNI();
-    this->id = NULL;
-    this->numSeg = NULL;
+    this->id = 0;
+    this->numSeg = 0;
 }
 
 void Pedido::generarDNI()
@@ -24,32 +23,13 @@ void Pedido::generarDNI()
     this->DNI[9] = '\0';
 }
 
-void Pedido::generarId(bool esUrgente)
-{
-    if(esUrgente){
-        id = (rand() % 49) + 51;
-    }else{
-        id = (rand() % 49) + 1;
-    }
-}
-
-void Pedido::setNumSeg(){
-    this->generarNumSeg( this->esUrgente);
+void Pedido::setNumSeg(int numero){
+    this->numSeg = numero;
     }
 
-void Pedido::setId(){
-    this->generarId( this->esUrgente);
+void Pedido::setId(int numero){
+    this->id = numero;
     }
-
-
-void Pedido::generarNumSeg(bool esUrgente)
-{
-    if(esUrgente){
-        numSeg = (rand() % 499) + 501;
-    }else{
-        numSeg = (rand() % 499) + 1;
-    }
-}
 
 bool Pedido::esUrgenteP()
 {
@@ -67,7 +47,7 @@ void Pedido::mostrar()
     if(esUrgente){
         urgencia = "urgente";
     }
-    if(!id==NULL){
+    if(!id==0){
     cout << "\t" << setw(10) << " El pedido " << id << " que pertenece a el DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
     }else{
          cout << "\t" << setw(10) << " El pedido " << "que pertenece a el DNI " << DNI << " es de prioridad:" << urgencia << endl;

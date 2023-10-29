@@ -29,7 +29,9 @@ public:
     int pedidosEnSalaD();
     int pedidosEnListaEstandar();
     int pedidosEnListaUrgentes();
-    
+    void generarId(bool esUrgente);
+    void generarNumSeg(bool esUrgente);
+    void eliminarElemento(int* array, int index, int& size);
     ~Gestor();
     
 private:
@@ -43,6 +45,10 @@ private:
     Lista urgente;
     Pedido pedidoE;
     Pedido pedidoU;
+    int arrayId[49];
+    int arrayNumSeg[49];
+    int tamanoArrayId;
+    int tamanoArrayNumSeg;
 };
 
 #endif

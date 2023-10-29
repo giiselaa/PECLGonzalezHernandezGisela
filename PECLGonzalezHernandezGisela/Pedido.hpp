@@ -13,8 +13,8 @@ public:
     bool esUrgenteP();
     void mostrar();
     int getId();
-    void setId();
-    void setNumSeg();
+    void setId(int);
+    void setNumSeg(int);
 private:
     char DNI[10];
     bool esUrgente;
@@ -22,8 +22,6 @@ private:
     int numSeg;
     
     void generarDNI();
-    void generarId(bool);
-    void generarNumSeg(bool);
     
 };
 
