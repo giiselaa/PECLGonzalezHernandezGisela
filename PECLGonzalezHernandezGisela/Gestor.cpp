@@ -83,6 +83,7 @@ void Gestor::generarNumSeg(bool esUrgente){
     }   
      
     arrayNumSeg[tamanoArrayNumSeg++] = NumSegS;
+    
 }
 
 void Gestor::generarId(bool esUrgente){
@@ -103,7 +104,7 @@ void Gestor::generarId(bool esUrgente){
         }
     } 
     arrayId[tamanoArrayId++] = idN;
-
+    
 }
 
 

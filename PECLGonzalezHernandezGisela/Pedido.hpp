@@ -22,11 +22,6 @@ private:
     bool esUrgente;
     int id;
     int numSeg;
-    int tamanoArraySeg;
-    int tamanoArrayId;
-    int arrayId[48];
-    int arraySeg[48];
-    
     void generarDNI();
     
 };
