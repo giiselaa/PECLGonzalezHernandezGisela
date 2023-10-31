@@ -119,36 +119,4 @@
       </Completion>
     </Configuration>
   </Settings>
-<<<<<<< HEAD
-  <VirtualDirectory Name="src">
-    <VirtualDirectory Name="Source Files">
-      <File Name="Pedido.cpp"/>
-      <File Name="NodoPila.cpp"/>
-      <File Name="NodoLista.cpp"/>
-      <File Name="NodoCola.cpp"/>
-      <File Name="NodoArbol.cpp"/>
-      <File Name="Lista.cpp"/>
-      <File Name="Gestor.cpp"/>
-      <File Name="Arbol.cpp"/>
-      <File Name="Cola.cpp"/>
-      <File Name="Pila.cpp"/>
-    </VirtualDirectory>
-    <VirtualDirectory Name="Header Files">
-      <File Name="Pedido.hpp"/>
-      <File Name="NodoPila.hpp"/>
-      <File Name="NodoLista.hpp"/>
-      <File Name="NodoCola.hpp"/>
-      <File Name="NodoArbol.hpp"/>
-      <File Name="Lista.hpp"/>
-      <File Name="Gestor.hpp"/>
-      <File Name="Arbol.hpp"/>
-      <File Name="Cola.hpp"/>
-      <File Name="Pila.hpp"/>
-    </VirtualDirectory>
-    <File Name="main.cpp"/>
-  </VirtualDirectory>
-  <Dependencies Name="Debug"/>
-  <Dependencies Name="Release"/>
-=======
->>>>>>> 5bbaed5ef4d8bb557a40a46b7bc8f9a71f25984d
 </CodeLite_Project>
