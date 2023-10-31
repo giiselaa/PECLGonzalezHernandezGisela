@@ -41,12 +41,15 @@ Pedido Pila::cima()
 
 void Pila::mostrar()
 {
+    if (longitud == 0){
+        cout << "\t" << setw(10) << "La pila esta vacia " << endl;
+    }else{
     pnodoPila aux = ultimo;
     cout << "\t" << setw(10) << " El contenido de la pila es: " <<endl;
     while(aux){
         aux->valor.mostrar();
         aux = aux->siguiente;
-    }
+    }}
       cout << endl;
 }
 

@@ -30,7 +30,7 @@ Pedido Lista::resto()
 void Lista::mostrar()
 {
     pnodoLista aux = primero;
-    cout<<"\t"<<" El contenido de la cola es: " << endl;
+    cout<<"\t"<<" El contenido de la lista es: " << endl;
     while (aux){
         aux->valor.mostrar();
         aux = aux->siguiente;

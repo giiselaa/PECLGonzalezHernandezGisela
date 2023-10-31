@@ -1,1 +1,1 @@
-Debug/Pila.cpp.o Debug/Cola.cpp.o Debug/Arbol.cpp.o Debug/Pedido.cpp.o Debug/Gestor.cpp.o Debug/Lista.cpp.o Debug/NodoArbol.cpp.o Debug/main.cpp.o Debug/NodoCola.cpp.o Debug/NodoPila.cpp.o Debug/NodoLista.cpp.o   
+Debug/Cola.cpp.o Debug/Arbol.cpp.o Debug/Lista.cpp.o Debug/Pila.cpp.o Debug/Gestor.cpp.o Debug/NodoArbol.cpp.o Debug/Pedido.cpp.o Debug/NodoLista.cpp.o Debug/NodoCola.cpp.o Debug/NodoPila.cpp.o Debug/main.cpp.o   

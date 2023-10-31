@@ -1,8 +1,10 @@
 #include "Gestor.hpp"
-
+#include <random>
 Gestor::Gestor()
 {
     maxPedidos = 0;
+    tamanoArrayNumSeg = 0;
+    tamanoArrayId = 0;
 }
 
 void Gestor::generarPedidosAleatorios(int cantidad) 
@@ -43,11 +45,10 @@ void Gestor::borrarPedidosPila()
 {
     while ((pila.getLongitud()) > 0) {
         Pedido pedido = pila.extraer();
-        bool urgencia = pedido.esUrgenteP();
-        generarNumSeg(urgencia);
-        pedido.setNumSeg(arrayNumSeg[tamanoArrayNumSeg-1]);
-        generarId(urgencia);
-        pedido.setId(arrayId[tamanoArrayId-1]);
+        int numSeg = generarNumSeg(pedido);
+        pedido.setNumSeg(numSeg);
+        int id = generarId(pedido);
+        pedido.setId(id);
         if (!pedido.esUrgenteP()){ //si no es urgente a A o B
             if (colaA.getLongitud() <= colaB.getLongitud()){
                 colaA.insertar(pedido);
@@ -64,14 +65,14 @@ void Gestor::borrarPedidosPila()
             
     }
 }
-void Gestor::generarNumSeg(bool esUrgente){
+int Gestor::generarNumSeg(Pedido pedido){
     int NumSegS;
-    bool existe = true;
-    while(existe){
-        if(esUrgente){
-            NumSegS = (rand() % 499) + 501;
+    bool existe;
+    do {
+        if(pedido.esUrgenteP()){
+            NumSegS = rand() % 499 + 501;
         } else {
-            NumSegS = (rand() % 499) + 1;
+            NumSegS = rand() % 499 + 1;
         }
         existe = false;
         for(int i = 0; i < tamanoArrayNumSeg; i++){
@@ -80,19 +81,22 @@ void Gestor::generarNumSeg(bool esUrgente){
                 break;
             }
         }
-    }   
-     
-    arrayNumSeg[tamanoArrayNumSeg++] = NumSegS;
+    } while(existe);
+    if(tamanoArrayNumSeg<48){
+        arrayNumSeg[tamanoArrayNumSeg] = NumSegS;
+        tamanoArrayNumSeg++;
+    } 
+    return NumSegS;
 }
 
-void Gestor::generarId(bool esUrgente){
+int Gestor::generarId(Pedido pedido){
     int idN;
-    bool existe = true;
-    while(existe){
-        if(esUrgente){
-            idN = (rand() % 49) + 51;
+    bool existe;
+    do {
+        if(pedido.esUrgenteP()){
+            idN = rand() % 49 + 51;
         } else {
-            idN = (rand() % 49) + 1;
+            idN = rand() % 49 + 1;
         }
         existe = false;
         for(int i = 0; i < tamanoArrayId; i++){
@@ -101,11 +105,13 @@ void Gestor::generarId(bool esUrgente){
                 break;
             }
         }
-    } 
-    arrayId[tamanoArrayId++] = idN;
-
+    } while(existe);
+    if(tamanoArrayId<48){
+        arrayId[tamanoArrayId] = idN;
+        tamanoArrayId++;
+    }
+    return idN;
 }
-
 
 int Gestor :: pedidosEnSalaA()
 {
@@ -140,86 +146,35 @@ void Gestor::muestraPedidosSalasCyD(){
 
 void Gestor::borraPedidosColas(){
     while(colaA.getLongitud() > 0){
-        Pedido pedido = colaA.extraer();
-        int idPedido = pedido.getId();
-        int index = -1;
-
-        for(int i = 0; i < tamanoArrayId; i++){
-            if(arrayId[i] == idPedido){
-                index = i;
-                break;
-            }
-        }
-
-        if(index != -1){
-            //eliminarElemento(arrayId, index, tamanoArrayId);
-            eliminarElemento(arrayNumSeg, index, tamanoArrayNumSeg);
-        }
+        colaA.eliminar();
     }
 
     while(colaB.getLongitud() > 0){
-        Pedido pedido = colaB.extraer();
-        int idPedido = pedido.getId();
-        int index = -1;
-
-        for(int i = 0; i < tamanoArrayId; i++){
-            if(arrayId[i] == idPedido){
-                index = i;
-                break;
-            }
-        }
-
-        if(index != -1){
-           // eliminarElemento(arrayId, index, tamanoArrayId);
-            eliminarElemento(arrayNumSeg, index, tamanoArrayNumSeg);
-        }
+        colaB.eliminar();
     }
 
     while(colaC.getLongitud() > 0){
-        Pedido pedido = colaC.extraer();
-        int idPedido = pedido.getId();
-        int index = -1;
-
-        for(int i = 0; i < tamanoArrayId; i++){
-            if(arrayId[i] == idPedido){
-                index = i;
-                break;
-            }
-        }
-
-        if(index != -1){
-            //eliminarElemento(arrayId, index, tamanoArrayId);
-            eliminarElemento(arrayNumSeg, index, tamanoArrayNumSeg);
-        }
+         colaC.eliminar();
     }
-
+    
     while(colaD.getLongitud() > 0){
-        Pedido pedido = colaD.extraer();
-        int idPedido = pedido.getId();
-        int index = -1;
-
-        for(int i = 0; i < tamanoArrayId; i++){
-            if(arrayId[i] == idPedido){
-                index = i;
-                break;
-            }
-        }
-
-        if(index != -1){
-            //eliminarElemento(arrayId, index, tamanoArrayId);
-            eliminarElemento(arrayNumSeg, index, tamanoArrayNumSeg);
-        }
+         colaD.eliminar();
     }
 
-    maxPedidos = pila.getLongitud() + estandar.getLongitud() + urgente.getLongitud();
+    maxPedidos = pila.getLongitud();
+
+    for(int i = 0; i < tamanoArrayId; i++){
+         arrayId[i] = 0;
+    }
+    for(int i = 0; i < tamanoArrayNumSeg; i++){
+         arrayNumSeg[i] = 0;
+    }
+        
+    tamanoArrayId = 0;
+    tamanoArrayNumSeg = 0;
 }
 
 
-void Gestor::eliminarElemento(int* array, int index, int& tamano) {
-    for (int i = index; i < tamano - 1; i++) {
-        array[i] = array[i + 1];
-    }
-}
 void Gestor::enlistarPedidos(){
     Pedido pedido;
     
@@ -273,6 +228,15 @@ void Gestor::reiniciar(){
     borrarPedidosPila();
     borraPedidosColas();
     borraPedidosListas();
+    for(int i = 0; i < tamanoArrayId; i++){
+         arrayId[i] = 0;
+    }
+    for(int i = 0; i < tamanoArrayNumSeg; i++){
+         arrayNumSeg[i] = 0;
+    }
+        
+    tamanoArrayId = 0;
+    tamanoArrayNumSeg = 0;
     
 }
 

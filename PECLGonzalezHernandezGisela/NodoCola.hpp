@@ -11,7 +11,6 @@ public:
 private:
     Pedido valor;
     NodoCola* siguiente;
-    
     friend class Cola;
 };
 

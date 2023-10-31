@@ -3,6 +3,7 @@
 #include "Pila.hpp"
 #include "Cola.hpp"
 #include "Lista.hpp"
+#include "Pedido.hpp"
 
 class Gestor
 {
@@ -29,8 +30,8 @@ public:
     int pedidosEnSalaD();
     int pedidosEnListaEstandar();
     int pedidosEnListaUrgentes();
-    void generarId(bool esUrgente);
-    void generarNumSeg(bool esUrgente);
+    int generarId(Pedido pedido);
+    int generarNumSeg(Pedido pedido);
     void eliminarElemento(int* array, int index, int& size);
     ~Gestor();
     
@@ -45,8 +46,8 @@ private:
     Lista urgente;
     Pedido pedidoE;
     Pedido pedidoU;
-    int arrayId[49];
-    int arrayNumSeg[49];
+    int arrayId[48];
+    int arrayNumSeg[48];
     int tamanoArrayId;
     int tamanoArrayNumSeg;
 };
