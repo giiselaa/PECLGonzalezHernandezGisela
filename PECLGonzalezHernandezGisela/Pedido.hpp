@@ -2,10 +2,12 @@
 #define PEDIDO_HPP
 #include <iostream>
 #include <iomanip>
+
 using namespace std;
 
 class Pedido
 {
+    
 public:
     Pedido();
    ~Pedido();
@@ -20,7 +22,6 @@ private:
     bool esUrgente;
     int id;
     int numSeg;
-    
     void generarDNI();
     
 };

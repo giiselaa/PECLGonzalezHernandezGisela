@@ -81,12 +81,19 @@ int Gestor::generarNumSeg(Pedido pedido){
                 break;
             }
         }
+<<<<<<< HEAD
     } while(existe);
     if(tamanoArrayNumSeg<48){
         arrayNumSeg[tamanoArrayNumSeg] = NumSegS;
         tamanoArrayNumSeg++;
     } 
     return NumSegS;
+=======
+    }   
+     
+    arrayNumSeg[tamanoArrayNumSeg++] = NumSegS;
+    
+>>>>>>> 5bbaed5ef4d8bb557a40a46b7bc8f9a71f25984d
 }
 
 int Gestor::generarId(Pedido pedido){
@@ -105,12 +112,18 @@ int Gestor::generarId(Pedido pedido){
                 break;
             }
         }
+<<<<<<< HEAD
     } while(existe);
     if(tamanoArrayId<48){
         arrayId[tamanoArrayId] = idN;
         tamanoArrayId++;
     }
     return idN;
+=======
+    } 
+    arrayId[tamanoArrayId++] = idN;
+    
+>>>>>>> 5bbaed5ef4d8bb557a40a46b7bc8f9a71f25984d
 }
 
 int Gestor :: pedidosEnSalaA()

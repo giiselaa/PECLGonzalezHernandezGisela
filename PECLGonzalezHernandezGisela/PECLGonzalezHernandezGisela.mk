@@ -6,16 +6,24 @@
 ProjectName            :=PECLGonzalezHernandezGisela
 ConfigurationName      :=Debug
 WorkspaceConfiguration :=Debug
+<<<<<<< HEAD
 WorkspacePath          :=C:/Users/achra/OneDrive/Documentos/Falla
 ProjectPath            :=C:/Users/achra/OneDrive/Documentos/PL1.2/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela
 IntermediateDirectory  :=$(ConfigurationName)
 OutDir                 := $(IntermediateDirectory)
+=======
+WorkspacePath          :=C:/Users/achra/OneDrive/Documentos/PL1
+ProjectPath            :="C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela"
+IntermediateDirectory  :=../../../PL1/build-$(WorkspaceConfiguration)/__/PL1_EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela
+OutDir                 :=$(IntermediateDirectory)
+>>>>>>> 5bbaed5ef4d8bb557a40a46b7bc8f9a71f25984d
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=achra
 Date                   :=31/10/2023
 CodeLitePath           :="C:/Program Files/CodeLite"
+MakeDirCommand         :=mkdir
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
 ObjectSuffix           :=.o
@@ -28,15 +36,14 @@ OutputSwitch           :=-o
 LibraryPathSwitch      :=-L
 PreprocessorSwitch     :=-D
 SourceSwitch           :=-c 
-OutputDirectory        :=$(IntermediateDirectory)
-OutputFile             :=$(IntermediateDirectory)/$(ProjectName).exe
+OutputDirectory        :=C:/Users/achra/OneDrive/Documentos/PL1/build-$(WorkspaceConfiguration)/bin
+OutputFile             :=..\..\..\PL1\build-$(WorkspaceConfiguration)\bin\$(ProjectName).exe
 Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="PECLGonzalezHernandezGisela.txt"
+ObjectsFileList        :=$(IntermediateDirectory)/ObjectsList.txt
 PCHCompileFlags        :=
-MakeDirCommand         :="C:/Program Files/CodeLite/mkdir.exe" -p
 RcCmpOptions           := 
 RcCompilerName         :=C:/TDM-GCC-64/bin/windres.exe
 LinkOptions            :=  
@@ -75,20 +82,20 @@ Objects=$(Objects0)
 ## Main Build Targets 
 ##
 .PHONY: all clean PreBuild PrePreBuild PostBuild MakeIntermediateDirs
-all: $(OutputFile)
+all: MakeIntermediateDirs $(OutputFile)
 
 $(OutputFile): $(IntermediateDirectory)/.d $(Objects) 
-	@$(MakeDirCommand) $(@D)
+	@if not exist "$(IntermediateDirectory)" $(MakeDirCommand) "$(IntermediateDirectory)"
 	@echo "" > $(IntermediateDirectory)/.d
 	@echo $(Objects0)  > $(ObjectsFileList)
 	$(LinkerName) $(OutputSwitch)$(OutputFile) @$(ObjectsFileList) $(LibPath) $(Libs) $(LinkOptions)
 
 MakeIntermediateDirs:
-	@$(MakeDirCommand) "$(ConfigurationName)"
-
+	@if not exist "$(IntermediateDirectory)" $(MakeDirCommand) "$(IntermediateDirectory)"
+	@if not exist "$(OutputDirectory)" $(MakeDirCommand) "$(OutputDirectory)"
 
 $(IntermediateDirectory)/.d:
-	@$(MakeDirCommand) "$(ConfigurationName)"
+	@if not exist "$(IntermediateDirectory)" $(MakeDirCommand) "$(IntermediateDirectory)"
 
 PreBuild:
 
@@ -96,6 +103,7 @@ PreBuild:
 ##
 ## Objects
 ##
+<<<<<<< HEAD
 $(IntermediateDirectory)/Cola.cpp$(ObjectSuffix): Cola.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1.2/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/Cola.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Cola.cpp$(PreprocessSuffix): Cola.cpp
@@ -150,11 +158,67 @@ $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1.2/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+=======
+$(IntermediateDirectory)/Pila.cpp$(ObjectSuffix): Pila.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/Pila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pila.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Pila.cpp$(PreprocessSuffix): Pila.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Pila.cpp$(PreprocessSuffix) Pila.cpp
+
+$(IntermediateDirectory)/Cola.cpp$(ObjectSuffix): Cola.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/Cola.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Cola.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Cola.cpp$(PreprocessSuffix): Cola.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Cola.cpp$(PreprocessSuffix) Cola.cpp
+
+$(IntermediateDirectory)/Arbol.cpp$(ObjectSuffix): Arbol.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/Arbol.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Arbol.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Arbol.cpp$(PreprocessSuffix): Arbol.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Arbol.cpp$(PreprocessSuffix) Arbol.cpp
+
+$(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix): Pedido.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/Pedido.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Pedido.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Pedido.cpp$(PreprocessSuffix): Pedido.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Pedido.cpp$(PreprocessSuffix) Pedido.cpp
+
+$(IntermediateDirectory)/Gestor.cpp$(ObjectSuffix): Gestor.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/Gestor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Gestor.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Gestor.cpp$(PreprocessSuffix): Gestor.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Gestor.cpp$(PreprocessSuffix) Gestor.cpp
+
+$(IntermediateDirectory)/Lista.cpp$(ObjectSuffix): Lista.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/Lista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Lista.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Lista.cpp$(PreprocessSuffix): Lista.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Lista.cpp$(PreprocessSuffix) Lista.cpp
+
+$(IntermediateDirectory)/NodoArbol.cpp$(ObjectSuffix): NodoArbol.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/NodoArbol.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoArbol.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/NodoArbol.cpp$(PreprocessSuffix): NodoArbol.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoArbol.cpp$(PreprocessSuffix) NodoArbol.cpp
+
+$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix): NodoCola.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/NodoCola.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoCola.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/NodoCola.cpp$(PreprocessSuffix): NodoCola.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoCola.cpp$(PreprocessSuffix) NodoCola.cpp
+
+$(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix): NodoPila.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/NodoPila.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoPila.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/NodoPila.cpp$(PreprocessSuffix): NodoPila.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoPila.cpp$(PreprocessSuffix) NodoPila.cpp
+
+$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix): NodoLista.cpp 
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/achra/OneDrive/Documentos/PL1 EEDD/PECLGonzalezHernandezGisela/PECLGonzalezHernandezGisela/NodoLista.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/NodoLista.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix): NodoLista.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/NodoLista.cpp$(PreprocessSuffix) NodoLista.cpp
+>>>>>>> 5bbaed5ef4d8bb557a40a46b7bc8f9a71f25984d
 
 ##
 ## Clean
 ##
 clean:
-	$(RM) -r $(ConfigurationName)/
+	$(RM) -r $(IntermediateDirectory)
 
 
