@@ -23,12 +23,15 @@ void Cola::insertar(Pedido pedido)
 }
 void Cola::mostrar()
 {
+    if (longitud == 0){
+       cout<< "\t" <<setw(10) <<" La cola esta vacia " << endl;         
+    }else{
     pnodoCola aux = primero;
-    cout<<"\t"<<" El contenido de la cola es: " << endl;
+    cout<< "\t" <<setw(10) <<" El contenido de la cola es: " << endl;
     while (aux){
         aux->valor.mostrar();
         aux = aux->siguiente;
-    }
+    }}
     cout <<endl;
 }
 
@@ -38,7 +41,7 @@ Pedido Cola::eliminar()
     Pedido pedido;
     nodo = primero;
     if(!nodo){
-        return pedido; //cambiado de Pedido()
+        return pedido; 
     }
 
         primero = nodo->siguiente;

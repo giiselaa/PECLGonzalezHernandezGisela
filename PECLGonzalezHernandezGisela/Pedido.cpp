@@ -48,7 +48,7 @@ void Pedido::mostrar()
         urgencia = "urgente";
     }
     if(!id==0){
-    cout << "\t" << setw(10) << " El pedido " << id << " que pertenece a el DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
+        cout << "\t" << setw(10) << " El pedido " << id << " que pertenece al DNI " << DNI << " con el numero de seguimiento "<< numSeg << " es de prioridad:" << urgencia << endl;
     }else{
          cout << "\t" << setw(10) << " El pedido " << "que pertenece al DNI " << DNI << " es de prioridad:" << urgencia << endl;
     }

@@ -14,7 +14,7 @@ Pedido Lista::resto()
     Pedido pedido;
     nodo = primero;
     if(!nodo){
-        return pedido; //Pedido()
+        return pedido; 
     }
 
         primero = nodo->siguiente;
@@ -30,7 +30,7 @@ Pedido Lista::resto()
 void Lista::mostrar()
 {
     pnodoLista aux = primero;
-    cout<<"\t"<<" El contenido de la lista es: " << endl;
+    cout<< "\t" << setw(10) <<" El contenido de la lista es: " << endl;
     while (aux){
         aux->valor.mostrar();
         aux = aux->siguiente;
