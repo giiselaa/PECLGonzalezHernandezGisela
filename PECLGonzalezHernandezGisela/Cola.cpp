@@ -27,7 +27,6 @@ void Cola::mostrar()
        cout<< "\t" <<setw(10) <<" La cola esta vacia " << endl;         
     }else{
     pnodoCola aux = primero;
-    cout<< "\t" <<setw(10) <<" El contenido de la cola es: " << endl;
     while (aux){
         aux->valor.mostrar();
         aux = aux->siguiente;

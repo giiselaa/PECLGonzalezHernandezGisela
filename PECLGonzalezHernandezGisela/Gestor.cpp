@@ -138,12 +138,16 @@ int Gestor :: pedidosEnSalaD()
 }
 
 void Gestor::muestraPedidosSalasAyB(){
+     cout<< "\t" <<setw(10)<< " El contenido de la cola A es: " << endl; 
      colaA.mostrar();
+     cout<< "\t" <<setw(10)<< " El contenido de la cola B es: " << endl;
      colaB.mostrar();
 }
 
 void Gestor::muestraPedidosSalasCyD(){
+    cout<< "\t" <<setw(10)<< " El contenido de la cola C es: " << endl;
     colaC.mostrar();
+    cout<< "\t" <<setw(10)<< " El contenido de la cola D es: " << endl;
     colaD.mostrar();
 
 }
@@ -212,10 +216,12 @@ int Gestor::pedidosEnListaUrgentes()
 }
 
 void Gestor::muestraPedidosEstandar(){
+    cout<< "\t" <<setw(10)<< " El contenido de la lista estandar es: " << endl;
         estandar.mostrar();
     }
 
 void Gestor::muestraPedidosUrgentes(){
+    cout<< "\t" <<setw(10)<< " El contenido de la lista urgente es: " << endl;
         urgente.mostrar();
     }
     
@@ -248,8 +254,9 @@ void Gestor::buscarPedidos(){
     
     pedidoE = estandar.getPrimero();
     pedidoU = urgente.getUltimo();
-    
+    cout<< "\t" <<setw(10)<< " El pedido de mayor prioridad dentro de los estandar es: " << endl;
     pedidoE.mostrar();
+    cout<< "\t" <<setw(10)<< " El pedido de menor prioridad dentro de los urgentes es: " << endl;
     pedidoU.mostrar();
 }
 

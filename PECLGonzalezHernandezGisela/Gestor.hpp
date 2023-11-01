@@ -32,7 +32,6 @@ public:
     int pedidosEnListaUrgentes();
     int generarId(Pedido pedido);
     int generarNumSeg(Pedido pedido);
-    void eliminarElemento(int* array, int index, int& size);
     ~Gestor();
     
 private:

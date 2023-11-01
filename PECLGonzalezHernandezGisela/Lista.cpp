@@ -28,12 +28,15 @@ Pedido Lista::resto()
 }
 
 void Lista::mostrar()
-{
+{   
+    if (longitud == 0){
+       cout<< "\t" <<setw(10) <<" La lista esta vacia " << endl;         
+    }else{
     pnodoLista aux = primero;
-    cout<< "\t" << setw(10) <<" El contenido de la lista es: " << endl;
     while (aux){
         aux->valor.mostrar();
         aux = aux->siguiente;
+    }
     }
     cout <<endl;
 }
