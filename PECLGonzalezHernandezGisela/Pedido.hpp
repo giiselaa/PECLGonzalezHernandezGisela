@@ -15,6 +15,7 @@ public:
     bool esUrgenteP();
     void mostrar();
     int getId();
+    int getNumSeg();
     void setId(int);
     void setNumSeg(int);
 private:

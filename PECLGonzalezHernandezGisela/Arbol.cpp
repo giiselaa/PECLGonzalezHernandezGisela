@@ -1,30 +1,41 @@
 #include "Arbol.hpp"
 
-Arbol::Arbol() { raiz = nullptr; }
-void Arbol::insertar(int val) { raiz = insertar(raiz, val); }
-pnodoAbb Arbol::insertar(pnodoAbb nodo, int val)
+Arbol::Arbol() 
+{
+ raiz = nullptr; 
+}
+
+void Arbol::insertar(Pedido pedido) 
+{
+ raiz = insertar(raiz, pedido); 
+}
+
+pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
 {
     if(!nodo)
-        return new NodoArbol(val);
-    if(val <= nodo->dato)
-        nodo->izq = insertar(nodo->izq, val);
+        return new NodoArbol(pedidoI);
+    if(pedidoI.getNumSeg() <= nodo->pedido.getNumSeg())
+        nodo->izq = insertar(nodo->izq, pedidoI);
     else
-        nodo->der = insertar(nodo->der, val);
+        nodo->der = insertar(nodo->der, pedidoI);
     return nodo;
 }
+
 void Arbol::pintar()
 {
     pintar(raiz);
     cout << '\n';
 }
+
 void Arbol::pintar(pnodoAbb nodo)
 {
     if(!nodo)
         return;
     pintar(nodo->izq);
-    cout << nodo->dato << " ";
+    cout << nodo -> pedido.getNumSeg() << " ";
     pintar(nodo->der);
 }
+
 int Arbol::altura(pnodoAbb nodo)
 {
     if(!nodo)
@@ -58,7 +69,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
 
     if(nodo->izq) {
         int numeroQueQuieroImprimirEnElArbol =
-            nodo->izq->dato; // En vez de este valor, tenéis que coger el número de la habitación del paciente.
+            nodo->izq->pedido.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
         string izqdato = SP + to_string(numeroQueQuieroImprimirEnElArbol) + SP;
         dibujarNodo(output, linkAbove, nodo->izq, nivel + 1, p - izqdato.size(), 'L');
         p = max(p, (int)output[nivel + 1].size());
@@ -68,7 +79,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
     if(space > 0)
         output[nivel] += string(space, ' ');
     int numeroQueQuieroImprimirEnElArbol =
-        nodo->dato; // En vez de este valor, tenéis que coger el número de la habitación del paciente.
+        nodo->pedido.getNumSeg(); // En vez de este valor, tenéis que coger el número de la habitación del paciente.
     string nododato = SP + to_string(numeroQueQuieroImprimirEnElArbol) + SP;
     output[nivel] += nododato;
 
@@ -116,6 +127,16 @@ void Arbol::dibujar()
         cout << output[i] << '\n';
     }
     cout << '\n' << '\n';
+}
+
+
+int Arbol::numNodos(pnodoAbb nodo){
+    
+    if (raiz == NULL) {
+        return 0;
+    }else{
+        return 1 + numNodos(nodo -> izq) + numNodos(nodo -> der);
+    }
 }
 
 Arbol::~Arbol() {}
