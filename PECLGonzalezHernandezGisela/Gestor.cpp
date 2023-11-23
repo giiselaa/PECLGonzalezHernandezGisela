@@ -275,10 +275,12 @@ int Gestor::insertarPedidosEnArbol(){
     
 }
 
+//cambiar
 int Gestor::pedidosEnArbol(){
+    
     insertarPedidosEnArbol();
-    pnodoAbb nodo;
-    return arbol.numNodos(nodo);
+    pnodoAbb raiz;
+    return arbol.numNodos(raiz);
 }
 
 Gestor::~Gestor()
