@@ -24,6 +24,8 @@ public:
     void borraPedidosListas();
     void reiniciar();
     void buscarPedidos();
+    void insertarPedidosEnArbol();    
+    void crearDibujarAbb();
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();
@@ -33,7 +35,6 @@ public:
     int pedidosEnListaUrgentes();
     int generarId(Pedido pedido);
     int generarNumSeg(Pedido pedido);
-    int insertarPedidosEnArbol();
     int pedidosEnArbol();
     ~Gestor();
     

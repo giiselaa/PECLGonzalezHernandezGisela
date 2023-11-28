@@ -65,6 +65,7 @@ void Gestor::borrarPedidosPila()
             
     }
 }
+
 int Gestor::generarNumSeg(Pedido pedido){
     int NumSegS;
     bool existe;
@@ -260,27 +261,31 @@ void Gestor::buscarPedidos(){
     pedidoU.mostrar();
 }
 
-int Gestor::insertarPedidosEnArbol(){
-    
-    Pedido pedido;
+void Gestor::insertarPedidosEnArbol(){
 
     for(int i = 0; i < estandar.getLongitud(); i++){
-        pedido = estandar.resto();
+        Pedido pedido = estandar.resto();
         arbol.insertar(pedido);
     }
     for(int i = 0; i < urgente.getLongitud(); i++){
-        pedido = urgente.resto();
+        Pedido pedido = urgente.resto();
         arbol.insertar(pedido);
     }
     
+} 
+
+int Gestor::pedidosEnArbol(){
+    return arbol.numNodos();
 }
 
-//cambiar
-int Gestor::pedidosEnArbol(){
+void Gestor::crearDibujarAbb(){
     
+    Pedido pedidoAux;
+    pedidoAux.setNumSeg(500);
+    
+    arbol.insertar(pedidoAux);
     insertarPedidosEnArbol();
-    pnodoAbb raiz;
-    return arbol.numNodos(raiz);
+    arbol.dibujar();
 }
 
 Gestor::~Gestor()

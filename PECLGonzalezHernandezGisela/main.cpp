@@ -102,7 +102,7 @@ int main(int argc, char** argv)
             gestor.reiniciar();
             break;
         case 'M':
-            //...;
+            gestor.crearDibujarAbb();
             break;
         case 'N':
             //...;

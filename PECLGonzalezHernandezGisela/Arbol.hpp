@@ -13,6 +13,7 @@ public:
     void insertar(Pedido pedido);
     void pintar();
     void dibujar();
+    int numNodos();
     int numNodos(pnodoAbb);
     ~Arbol();
 
