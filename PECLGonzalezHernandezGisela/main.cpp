@@ -105,25 +105,25 @@ int main(int argc, char** argv)
             gestor.crearDibujarAbb();
             break;
         case 'N':
-            //...;
+            //gestor.mostrarEstandarArbol();
             break;
         case 'O':
-            //...;
+            //gestor.mostrarUrgenteArbol();
             break;
         case 'P':
-            //...;
+            //gestor.mostrarPedidosArbol();
             break;
         case 'Q':
-            //...;
+            //gestor.buscarPedidosArbol();
             break;
         case 'R':
-            //...;
+            //gestor.contarImpares();
             break;
         case 'T':
-            //...;
+            //gestor.mostrarPedidosHoja();
             break;
         case 'U':
-            //...;
+            //gestor.eliminarPedidoArbol();
             break;
         case 'S':
             cout << "Saliendo del programa...\n";
