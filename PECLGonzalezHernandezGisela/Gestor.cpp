@@ -288,6 +288,23 @@ void Gestor::crearDibujarAbb(){
     arbol.dibujar();
 }
 
+/**
+ * escribimos aqui el codigo de antes de la R
+ */
+ 
+/*
+int Gestor::contarImpares(){
+    
+    int cont;
+
+    for (int i = 0; i < arbol.numNodos() ; i++){
+        if(// numseg % 2 != 0){
+            cont = cont+1;
+        }
+    }
+    return cont;
+}
+*/
 Gestor::~Gestor()
 {
 }

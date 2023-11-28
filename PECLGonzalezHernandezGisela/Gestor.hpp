@@ -36,6 +36,9 @@ public:
     int generarId(Pedido pedido);
     int generarNumSeg(Pedido pedido);
     int pedidosEnArbol();
+    
+    
+    int contarImpares();
     ~Gestor();
     
 private:

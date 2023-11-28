@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace">
-  <int Value="5" Name="m_selectedTab"/>
+  <int Value="6" Name="m_selectedTab"/>
   <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Arbol.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="144" Name="CurrentLine"/>
+      <int Value="27" Name="FirstVisibleLine"/>
+      <int Value="29" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -40,22 +40,22 @@
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\main.cpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="125" Name="CurrentLine"/>
+      <int Value="99" Name="FirstVisibleLine"/>
+      <int Value="121" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.cpp" Name="FileName"/>
-      <int Value="250" Name="FirstVisibleLine"/>
-      <int Value="274" Name="CurrentLine"/>
+      <int Value="285" Name="FirstVisibleLine"/>
+      <int Value="293" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.hpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="39" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

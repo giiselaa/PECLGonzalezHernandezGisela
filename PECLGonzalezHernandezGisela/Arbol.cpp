@@ -91,6 +91,7 @@ void Arbol::dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodo
     if(nodo->der)
         dibujarNodo(output, linkAbove, nodo->der, nivel + 1, output[nivel].size(), 'R');
 }
+
 void Arbol::dibujar()
 {
     int h = altura(raiz);
