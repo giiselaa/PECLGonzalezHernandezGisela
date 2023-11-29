@@ -7,7 +7,7 @@ Arbol::Arbol()
 
 void Arbol::insertar(Pedido pedido) 
 {
- raiz = insertar(raiz, pedido); 
+    raiz = insertar(raiz, pedido); 
 }
 
 pnodoAbb Arbol::insertar(pnodoAbb nodo, Pedido pedidoI)
@@ -142,6 +142,24 @@ int Arbol::numNodos(pnodoAbb nodo){
         return 0;
     }else{
         return 1 + numNodos(nodo -> izq) + numNodos(nodo -> der);
+    }
+}
+
+int Arbol::impares(){
+    return impares(raiz);
+}
+
+int Arbol::impares(pnodoAbb nodo){
+    
+    int cont = 0;
+    
+    if(nodo == NULL){
+        return 0;
+    }else{
+        if (nodo -> pedido.getNumSeg() % 2 != 0){
+            cont = cont + 1;
+        }
+        return cont + impares(nodo -> izq) + impares(nodo -> der);
     }
 }
 

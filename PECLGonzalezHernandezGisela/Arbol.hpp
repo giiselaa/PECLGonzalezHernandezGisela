@@ -15,15 +15,17 @@ public:
     void dibujar();
     int numNodos();
     int numNodos(pnodoAbb);
+    int impares();
+    int impares(pnodoAbb);
     ~Arbol();
 
 private:
     pnodoAbb raiz;
     pnodoAbb insertar(pnodoAbb, Pedido);
     void pintar(pnodoAbb);
-    int altura(pnodoAbb);
     void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int minPos,
                      char linkChar);
+    int altura(pnodoAbb);
 };
 
 #endif // ARBOL_HPP

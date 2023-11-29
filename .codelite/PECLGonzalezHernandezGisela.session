@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Session Name="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace">
-  <int Value="6" Name="m_selectedTab"/>
+  <int Value="0" Name="m_selectedTab"/>
   <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Arbol.cpp" Name="FileName"/>
-      <int Value="27" Name="FirstVisibleLine"/>
-      <int Value="29" Name="CurrentLine"/>
+      <int Value="149" Name="FirstVisibleLine"/>
+      <int Value="101" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Arbol.hpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="0" Name="CurrentLine"/>
+      <int Value="9" Name="FirstVisibleLine"/>
+      <int Value="18" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -39,23 +39,16 @@
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
-      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\main.cpp" Name="FileName"/>
-      <int Value="99" Name="FirstVisibleLine"/>
-      <int Value="121" Name="CurrentLine"/>
-      <wxArrayString Name="Bookmarks"/>
-      <IntVector Name="CollapsedFolds"/>
-    </TabInfo>
-    <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.cpp" Name="FileName"/>
-      <int Value="285" Name="FirstVisibleLine"/>
-      <int Value="293" Name="CurrentLine"/>
+      <int Value="277" Name="FirstVisibleLine"/>
+      <int Value="295" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
     <TabInfo>
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.hpp" Name="FileName"/>
-      <int Value="0" Name="FirstVisibleLine"/>
-      <int Value="39" Name="CurrentLine"/>
+      <int Value="21" Name="FirstVisibleLine"/>
+      <int Value="29" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>
@@ -105,6 +98,13 @@
       <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Lista.cpp" Name="FileName"/>
       <int Value="0" Name="FirstVisibleLine"/>
       <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\main.cpp" Name="FileName"/>
+      <int Value="108" Name="FirstVisibleLine"/>
+      <int Value="119" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

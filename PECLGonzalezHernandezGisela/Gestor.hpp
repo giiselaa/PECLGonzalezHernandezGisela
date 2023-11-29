@@ -26,6 +26,9 @@ public:
     void buscarPedidos();
     void insertarPedidosEnArbol();    
     void crearDibujarAbb();
+    
+    void contarImpares();
+    
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();
@@ -36,9 +39,6 @@ public:
     int generarId(Pedido pedido);
     int generarNumSeg(Pedido pedido);
     int pedidosEnArbol();
-    
-    
-    int contarImpares();
     ~Gestor();
     
 private:

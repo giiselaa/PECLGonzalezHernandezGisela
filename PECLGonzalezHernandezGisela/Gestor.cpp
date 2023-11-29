@@ -292,19 +292,11 @@ void Gestor::crearDibujarAbb(){
  * escribimos aqui el codigo de antes de la R
  */
  
-/*
-int Gestor::contarImpares(){
-    
-    int cont;
-
-    for (int i = 0; i < arbol.numNodos() ; i++){
-        if(// numseg % 2 != 0){
-            cont = cont+1;
-        }
-    }
-    return cont;
+void Gestor::contarImpares(){
+    cout << "\t" <<setw(10)<< " El arbol tiene " << arbol.impares() << " pedidos con numero de seguimiento impar" << endl;
 }
-*/
+
+
 Gestor::~Gestor()
 {
 }

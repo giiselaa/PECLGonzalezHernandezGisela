@@ -93,16 +93,16 @@ int main(int argc, char** argv)
               gestor.muestraPedidosEstandar();
             break;
         case 'J':
-            gestor.muestraPedidosUrgentes();
+              gestor.muestraPedidosUrgentes();
             break;
         case 'K':
-            gestor.buscarPedidos();
+              gestor.buscarPedidos();
             break;
         case 'L':
-            gestor.reiniciar();
+              gestor.reiniciar();
             break;
         case 'M':
-            gestor.crearDibujarAbb();
+              gestor.crearDibujarAbb();
             break;
         case 'N':
             //gestor.mostrarEstandarArbol();
@@ -117,7 +117,7 @@ int main(int argc, char** argv)
             //gestor.buscarPedidosArbol();
             break;
         case 'R':
-            //gestor.contarImpares();
+              gestor.contarImpares();
             break;
         case 'T':
             //gestor.mostrarPedidosHoja();
