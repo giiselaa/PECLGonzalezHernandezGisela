@@ -163,5 +163,27 @@ int Arbol::impares(pnodoAbb nodo){
     }
 }
 
+void Arbol::mostrarEstandar(){
+    recorrerEstandar(raiz);
+}
+
+void Arbol::recorrerEstandar(pnodoAbb nodo){
+//corregir porque ahora mismo solo imprime 1 pedido (el ultimo del arbol)
+    if(nodo -> pedido.getNumSeg() <= 500){
+
+        if(nodo -> izq == NULL){
+             nodo -> pedido.mostrar();
+        }else{
+            recorrerEstandar(nodo -> izq);            
+        }
+        
+    }
+    
+}
+
+void Arbol::mostrarUrgentes(){
+      
+}
+
 Arbol::~Arbol() {}
 

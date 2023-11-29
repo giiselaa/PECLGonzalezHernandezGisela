@@ -288,6 +288,16 @@ void Gestor::crearDibujarAbb(){
     arbol.dibujar();
 }
 
+void Gestor::mostrarEstandarArbol(){
+    cout<< "\t" << setw(10) << " Los pedidos estandar almacenados son: " << endl;
+    arbol.mostrarEstandar();
+}
+
+void Gestor::mostrarUrgenteArbol(){
+    cout<< "\t" << setw(10) << " Los pedidos urgentes almacenados son: " << endl;
+    arbol.mostrarUrgentes();
+}
+
 /**
  * escribimos aqui el codigo de antes de la R
  */

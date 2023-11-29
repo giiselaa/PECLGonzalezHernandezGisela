@@ -26,9 +26,10 @@ public:
     void buscarPedidos();
     void insertarPedidosEnArbol();    
     void crearDibujarAbb();
+    void mostrarEstandarArbol();
+    void mostrarUrgenteArbol();
     
     void contarImpares();
-    
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();

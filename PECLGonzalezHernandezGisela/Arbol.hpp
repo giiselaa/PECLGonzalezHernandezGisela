@@ -3,6 +3,7 @@
 
 #include "NodoArbol.hpp"
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
@@ -13,10 +14,13 @@ public:
     void insertar(Pedido pedido);
     void pintar();
     void dibujar();
+    void mostrarEstandar();
+    void mostrarUrgentes();
     int numNodos();
     int numNodos(pnodoAbb);
     int impares();
     int impares(pnodoAbb);
+    void recorrerEstandar(pnodoAbb);
     ~Arbol();
 
 private:

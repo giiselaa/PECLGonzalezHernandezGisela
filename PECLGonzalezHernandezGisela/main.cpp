@@ -105,7 +105,7 @@ int main(int argc, char** argv)
               gestor.crearDibujarAbb();
             break;
         case 'N':
-            //gestor.mostrarEstandarArbol();
+              gestor.mostrarEstandarArbol();
             break;
         case 'O':
             //gestor.mostrarUrgenteArbol();
