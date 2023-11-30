@@ -108,7 +108,7 @@ int main(int argc, char** argv)
               gestor.mostrarEstandarArbol();
             break;
         case 'O':
-            //gestor.mostrarUrgenteArbol();
+              gestor.mostrarUrgenteArbol();
             break;
         case 'P':
             //gestor.mostrarPedidosArbol();

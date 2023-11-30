@@ -1,5 +1,6 @@
 #include "Arbol.hpp"
 
+
 Arbol::Arbol() 
 {
  raiz = nullptr; 
@@ -164,25 +165,29 @@ int Arbol::impares(pnodoAbb nodo){
 }
 
 void Arbol::mostrarEstandar(){
-    recorrerEstandar(raiz);
+    recorrerEstandar(raiz -> izq);
+    estandarArbol.mostrar();
 }
 
 void Arbol::recorrerEstandar(pnodoAbb nodo){
-//corregir porque ahora mismo solo imprime 1 pedido (el ultimo del arbol)
-    if(nodo -> pedido.getNumSeg() <= 500){
-
-        if(nodo -> izq == NULL){
-             nodo -> pedido.mostrar();
-        }else{
-            recorrerEstandar(nodo -> izq);            
+        if(nodo != NULL){
+            //hacer funcion para insertar en orden d numseg
+            estandarArbol.insertarEnOrden(nodo -> pedido);
+            recorrerEstandar(nodo -> izq);
         }
-        
-    }
-    
 }
 
 void Arbol::mostrarUrgentes(){
-      
+    recorrerUrgente(raiz -> der);
+    urgenteArbol.mostrar();
+}
+
+void Arbol::recorrerUrgente(pnodoAbb nodo){
+    if(nodo != NULL){
+            //hacer funcion para insertar en orden d numseg
+            urgenteArbol.insertarEnOrden(nodo -> pedido);
+            recorrerUrgente(nodo -> der);
+        }
 }
 
 Arbol::~Arbol() {}

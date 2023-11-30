@@ -2,6 +2,7 @@
 #define ARBOL_HPP
 
 #include "NodoArbol.hpp"
+#include "Lista.hpp"
 #include <vector>
 #include <iostream>
 
@@ -16,11 +17,12 @@ public:
     void dibujar();
     void mostrarEstandar();
     void mostrarUrgentes();
+    void recorrerEstandar(pnodoAbb);
+    void recorrerUrgente(pnodoAbb);
     int numNodos();
     int numNodos(pnodoAbb);
     int impares();
     int impares(pnodoAbb);
-    void recorrerEstandar(pnodoAbb);
     ~Arbol();
 
 private:
@@ -30,6 +32,8 @@ private:
     void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int minPos,
                      char linkChar);
     int altura(pnodoAbb);
+    Lista estandarArbol;
+    Lista urgenteArbol;
 };
 
 #endif // ARBOL_HPP
