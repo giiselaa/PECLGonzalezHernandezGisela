@@ -42,7 +42,7 @@ void Lista::mostrar()
 }
 
 void Lista::insertarEnOrden(Pedido pedido) 
-{
+{ 
     pnodoLista nodo;
     nodo = new NodoLista(pedido);
 
@@ -53,6 +53,32 @@ void Lista::insertarEnOrden(Pedido pedido)
         pnodoLista actual = primero;
 
         while (actual->siguiente && pedido.getId() >= actual->siguiente->valor.getId()) {
+            actual = actual->siguiente;
+        }
+
+        nodo->siguiente = actual->siguiente;
+        actual->siguiente = nodo;
+    }
+    pnodoLista ultimo = primero;
+    while (ultimo->siguiente) {
+        ultimo = ultimo->siguiente;
+    }
+    ultimo->siguiente = nullptr;
+    longitud++;
+}
+
+void Lista::insertarOrdenNumSeg(Pedido pedido)
+{
+    pnodoLista nodo;
+    nodo = new NodoLista(pedido);
+
+    if (!primero || pedido.getNumSeg() < primero->valor.getNumSeg()){
+        nodo->siguiente = primero;
+        primero = nodo;
+    } else {
+        pnodoLista actual = primero;
+
+        while (actual->siguiente && pedido.getNumSeg() >= actual->siguiente->valor.getNumSeg()) {
             actual = actual->siguiente;
         }
 
@@ -86,6 +112,8 @@ Pedido Lista::getUltimo()
     }
     return ultimo->valor;
 }
+
+
 
 Lista::~Lista()
 {

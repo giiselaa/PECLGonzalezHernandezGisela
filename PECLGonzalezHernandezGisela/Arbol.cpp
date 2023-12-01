@@ -171,9 +171,9 @@ void Arbol::mostrarEstandar(){
 
 void Arbol::recorrerEstandar(pnodoAbb nodo){
         if(nodo != NULL){
-            //hacer funcion para insertar en orden d numseg
-            estandarArbol.insertarEnOrden(nodo -> pedido);
+            estandarArbol.insertarOrdenNumSeg(nodo -> pedido);
             recorrerEstandar(nodo -> izq);
+            recorrerEstandar(nodo -> der);
         }
 }
 
@@ -184,8 +184,8 @@ void Arbol::mostrarUrgentes(){
 
 void Arbol::recorrerUrgente(pnodoAbb nodo){
     if(nodo != NULL){
-            //hacer funcion para insertar en orden d numseg
-            urgenteArbol.insertarEnOrden(nodo -> pedido);
+            urgenteArbol.insertarOrdenNumSeg(nodo -> pedido);
+            recorrerUrgente(nodo -> izq);
             recorrerUrgente(nodo -> der);
         }
 }
