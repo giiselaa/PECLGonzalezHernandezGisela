@@ -1,12 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Session Name="C:\Users\giise\Documents\Curso2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace">
-  <int Value="0" Name="m_selectedTab"/>
-  <wxString Value="C:\Users\giise\Documents\Curso2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace" Name="m_workspaceName"/>
+<Session Name="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace">
+  <int Value="6" Name="m_selectedTab"/>
+  <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela.workspace" Name="m_workspaceName"/>
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
-      <wxString Value="C:\Users\giise\Documents\Curso2\EEDD\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\main.cpp" Name="FileName"/>
-      <int Value="33" Name="FirstVisibleLine"/>
-      <int Value="37" Name="CurrentLine"/>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Arbol.cpp" Name="FileName"/>
+      <int Value="123" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Arbol.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\NodoArbol.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\NodoArbol.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Cola.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\main.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.cpp" Name="FileName"/>
+      <int Value="273" Name="FirstVisibleLine"/>
+      <int Value="281" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Gestor.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Pedido.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Pedido.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\Curso2\EEDD\ABB\Arbol.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\Curso2\EEDD\ABB\Arbol.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\Curso2\EEDD\ABB\NodoArbol.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\Curso2\EEDD\ABB\NodoArbol.hpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
+      <wxArrayString Name="Bookmarks"/>
+      <IntVector Name="CollapsedFolds"/>
+    </TabInfo>
+    <TabInfo>
+      <wxString Value="C:\Users\giise\Documents\PECLGonzalezHernandezGisela\PECLGonzalezHernandezGisela\Lista.cpp" Name="FileName"/>
+      <int Value="0" Name="FirstVisibleLine"/>
+      <int Value="0" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
     </TabInfo>

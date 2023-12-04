@@ -4,6 +4,7 @@
 #include "Cola.hpp"
 #include "Lista.hpp"
 #include "Pedido.hpp"
+#include "Arbol.hpp"
 
 class Gestor
 {
@@ -32,6 +33,8 @@ public:
     int pedidosEnListaUrgentes();
     int generarId(Pedido pedido);
     int generarNumSeg(Pedido pedido);
+    int insertarPedidosEnArbol();
+    int pedidosEnArbol();
     ~Gestor();
     
 private:
@@ -49,6 +52,7 @@ private:
     int arrayNumSeg[48];
     int tamanoArrayId;
     int tamanoArrayNumSeg;
+    Arbol arbol;
 };
 
 #endif

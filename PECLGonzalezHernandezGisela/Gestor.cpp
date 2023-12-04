@@ -260,6 +260,29 @@ void Gestor::buscarPedidos(){
     pedidoU.mostrar();
 }
 
+int Gestor::insertarPedidosEnArbol(){
+    
+    Pedido pedido;
+
+    for(int i = 0; i < estandar.getLongitud(); i++){
+        pedido = estandar.resto();
+        arbol.insertar(pedido);
+    }
+    for(int i = 0; i < urgente.getLongitud(); i++){
+        pedido = urgente.resto();
+        arbol.insertar(pedido);
+    }
+    
+}
+
+//cambiar
+int Gestor::pedidosEnArbol(){
+    
+    insertarPedidosEnArbol();
+    pnodoAbb raiz;
+    return arbol.numNodos(raiz);
+}
+
 Gestor::~Gestor()
 {
 }

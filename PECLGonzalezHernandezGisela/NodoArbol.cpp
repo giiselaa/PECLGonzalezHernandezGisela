@@ -1,10 +1,11 @@
 #include "NodoArbol.hpp"
 
-NodoArbol::NodoArbol()
+NodoArbol::NodoArbol(Pedido pedido)
 {
+    this->pedido = pedido;
+    this->izq = nullptr;
+    this->der = nullptr;
 }
 
-NodoArbol::~NodoArbol()
-{
-}
+NodoArbol::~NodoArbol() {}
 
