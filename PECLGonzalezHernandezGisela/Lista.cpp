@@ -107,31 +107,6 @@ void Lista::insertarOrdenNumSeg(Pedido pedido)
     ultimo->siguiente = nullptr;
     longitud++;
 }
-void Lista::insertarOrdenId(Pedido pedido)
-{
-    pnodoLista nodo;
-    nodo = new NodoLista(pedido);
-
-    if (!primero || pedido.getId() < primero->valor.getId()){
-        nodo->siguiente = primero;
-        primero = nodo;
-    } else {
-        pnodoLista actual = primero;
-
-        while (actual->siguiente && pedido.getId() >= actual->siguiente->valor.getId()) {
-            actual = actual->siguiente;
-        }
-
-        nodo->siguiente = actual->siguiente;
-        actual->siguiente = nodo;
-    }
-    pnodoLista ultimo = primero;
-    while (ultimo->siguiente) {
-        ultimo = ultimo->siguiente;
-    }
-    ultimo->siguiente = nullptr;
-    longitud++;
-}
 
 int Lista::getLongitud()
 {

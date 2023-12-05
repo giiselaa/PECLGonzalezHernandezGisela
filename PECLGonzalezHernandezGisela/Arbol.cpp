@@ -209,7 +209,7 @@ void Arbol::inordenMostrar() {
 
 void Arbol::recorrerUrgenteId(pnodoAbb nodo){
     if(nodo != NULL){
-        urgenteArbol.insertarOrdenId(nodo -> pedido);
+        urgenteArbol.insertarEnOrden(nodo -> pedido);
         recorrerUrgenteId(nodo -> izq);
         recorrerUrgenteId(nodo -> der);
     }
