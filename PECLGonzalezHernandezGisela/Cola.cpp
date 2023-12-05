@@ -34,7 +34,7 @@ void Cola::mostrar()
     cout <<endl;
 }
 
-Pedido Cola::eliminar()
+Pedido Cola::extraer()
 {
     pnodoCola nodo;
     Pedido pedido;
@@ -53,22 +53,7 @@ Pedido Cola::eliminar()
         return pedido;
 }
 
-Pedido Cola::extraer()
-{
-    Pedido pedido;
-    
-    if(!primero){
-        return pedido;
-    }
-    
-    pnodoCola nodo = primero;
-    pedido = nodo->valor;
-    primero = nodo->siguiente;
-    
-    delete nodo;
-    longitud--;
-    return pedido;
-}
+
 
 Pedido Cola::verPrimero()
 {
@@ -83,6 +68,6 @@ int Cola::getLongitud()
 Cola::~Cola()
 {
     while(primero)
-        eliminar();
+        extraer();
 }
 

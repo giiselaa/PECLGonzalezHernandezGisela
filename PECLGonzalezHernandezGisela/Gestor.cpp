@@ -5,6 +5,7 @@ Gestor::Gestor()
     maxPedidos = 0;
     tamanoArrayNumSeg = 0;
     tamanoArrayId = 0;
+    raizCreada=false;
 }
 
 void Gestor::generarPedidosAleatorios(int cantidad) 
@@ -37,7 +38,7 @@ void Gestor::borrarPedidosPila()
     while((pila.getLongitud()) > 0) {
         pila.desapilar();
     }
-    maxPedidos=0;
+    maxPedidos=colaA.getLongitud()+colaB.getLongitud()+colaC.getLongitud()+colaD.getLongitud()+estandar.getLongitud()+urgente.getLongitud()+arbol.numNodos();
 }
 
 
@@ -65,6 +66,7 @@ void Gestor::borrarPedidosPila()
             
     }
 }
+
 int Gestor::generarNumSeg(Pedido pedido){
     int NumSegS;
     bool existe;
@@ -154,22 +156,22 @@ void Gestor::muestraPedidosSalasCyD(){
 
 void Gestor::borraPedidosColas(){
     while(colaA.getLongitud() > 0){
-        colaA.eliminar();
+        colaA.extraer();
     }
 
     while(colaB.getLongitud() > 0){
-        colaB.eliminar();
+        colaB.extraer();
     }
 
     while(colaC.getLongitud() > 0){
-         colaC.eliminar();
+         colaC.extraer();
     }
     
     while(colaD.getLongitud() > 0){
-         colaD.eliminar();
+         colaD.extraer();
     }
 
-    maxPedidos = pila.getLongitud();
+    maxPedidos = pila.getLongitud()+estandar.getLongitud()+urgente.getLongitud()+arbol.numNodos();;
 
     for(int i = 0; i < tamanoArrayId; i++){
          arrayId[i] = 0;
@@ -260,28 +262,61 @@ void Gestor::buscarPedidos(){
     pedidoU.mostrar();
 }
 
-int Gestor::insertarPedidosEnArbol(){
-    
-    Pedido pedido;
-
-    for(int i = 0; i < estandar.getLongitud(); i++){
-        pedido = estandar.resto();
+void Gestor::insertarPedidosEnArbol(){
+   
+    while (estandar.getLongitud()>0){
+        Pedido pedido = estandar.resto();
         arbol.insertar(pedido);
     }
-    for(int i = 0; i < urgente.getLongitud(); i++){
-        pedido = urgente.resto();
+    while(urgente.getLongitud()>0){
+        Pedido pedido = urgente.resto();
         arbol.insertar(pedido);
     }
     
-}
+} 
 
-//cambiar
 int Gestor::pedidosEnArbol(){
-    
-    insertarPedidosEnArbol();
-    pnodoAbb raiz;
-    return arbol.numNodos(raiz);
+    if(!raizCreada){ return 0;}
+    else{
+    return arbol.numNodos() -1;
+    }
 }
+
+void Gestor::crearDibujarAbb(){
+    if(estandar.getLongitud() != 0 && urgente.getLongitud() !=0){
+    if(!raizCreada){
+    Pedido pedidoAux;
+    pedidoAux.setNumSeg(500);
+    arbol.insertar(pedidoAux);
+    raizCreada=true;
+    }
+    insertarPedidosEnArbol();
+    arbol.dibujar();
+    }
+    else{
+    cout<< "\t" << setw(10) << "No hay pedidos que puedan ser insertados en el arbol" << endl;
+    }
+}
+
+void Gestor::mostrarEstandarArbol(){
+    cout<< "\t" << setw(10) << " Los pedidos estandar almacenados son: " << endl;
+    arbol.mostrarEstandar();
+}
+
+void Gestor::mostrarUrgenteArbol(){
+    cout<< "\t" << setw(10) << " Los pedidos urgentes almacenados son: " << endl;
+    arbol.mostrarUrgentes();
+}
+
+void Gestor::mostrarPedidosInorden(){
+    cout<< "\t" << setw(10) << " Los pedidos recorridos en inorden son: " << endl;
+    arbol.inordenMostrar();
+}
+ 
+void Gestor::contarImpares(){
+    cout << "\t" <<setw(10)<< " El arbol tiene " << arbol.impares() << " pedidos con numero de seguimiento impar" << endl;
+}
+
 
 Gestor::~Gestor()
 {

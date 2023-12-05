@@ -15,7 +15,9 @@ public:
     Pedido getPrimero();
     Pedido getUltimo();
     void mostrar();
+    void insertar(Pedido pedido);
     void insertarEnOrden(Pedido pedido);
+    void insertarOrdenNumSeg(Pedido pedido);
     int getLongitud();
     
 private:

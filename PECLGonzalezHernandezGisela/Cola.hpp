@@ -13,7 +13,6 @@ public:
     ~Cola();
     
     void insertar(Pedido pedido);
-    Pedido eliminar();
     void mostrar();
     Pedido verPrimero();
     int getLongitud();

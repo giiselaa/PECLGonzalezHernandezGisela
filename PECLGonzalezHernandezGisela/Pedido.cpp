@@ -23,12 +23,15 @@ void Pedido::generarDNI()
     this->DNI[9] = '\0';
 }
 
-void Pedido::setNumSeg(int numero){
+void Pedido::setNumSeg(int numero)
+{
     this->numSeg = numero;
 }
-void Pedido::setId(int numero){
+
+void Pedido::setId(int numero)
+{
     this->id = numero;
-    }
+}
     
 bool Pedido::esUrgenteP()
 {

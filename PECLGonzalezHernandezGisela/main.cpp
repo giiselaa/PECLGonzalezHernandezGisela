@@ -93,37 +93,37 @@ int main(int argc, char** argv)
               gestor.muestraPedidosEstandar();
             break;
         case 'J':
-            gestor.muestraPedidosUrgentes();
+              gestor.muestraPedidosUrgentes();
             break;
         case 'K':
-            gestor.buscarPedidos();
+              gestor.buscarPedidos();
             break;
         case 'L':
-            gestor.reiniciar();
+              gestor.reiniciar();
             break;
         case 'M':
-            //...;
+              gestor.crearDibujarAbb();
             break;
         case 'N':
-            //...;
+              gestor.mostrarEstandarArbol();
             break;
         case 'O':
-            //...;
+              gestor.mostrarUrgenteArbol();
             break;
         case 'P':
-            //...;
+              gestor.mostrarPedidosInorden();
             break;
         case 'Q':
-            //...;
+            //gestor.buscarPedidosArbol();
             break;
         case 'R':
-            //...;
+              gestor.contarImpares();
             break;
         case 'T':
-            //...;
+            //gestor.mostrarPedidosHoja();
             break;
         case 'U':
-            //...;
+            //gestor.eliminarPedidoArbol();
             break;
         case 'S':
             cout << "Saliendo del programa...\n";

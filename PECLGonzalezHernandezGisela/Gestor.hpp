@@ -24,6 +24,13 @@ public:
     void borraPedidosListas();
     void reiniciar();
     void buscarPedidos();
+    void insertarPedidosEnArbol();    
+    void crearDibujarAbb();
+    void mostrarEstandarArbol();
+    void mostrarUrgenteArbol();
+    void mostrarPedidosInorden();
+    
+    void contarImpares();
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();
@@ -33,7 +40,6 @@ public:
     int pedidosEnListaUrgentes();
     int generarId(Pedido pedido);
     int generarNumSeg(Pedido pedido);
-    int insertarPedidosEnArbol();
     int pedidosEnArbol();
     ~Gestor();
     
@@ -53,6 +59,7 @@ private:
     int tamanoArrayId;
     int tamanoArrayNumSeg;
     Arbol arbol;
+    bool raizCreada;
 };
 
 #endif
