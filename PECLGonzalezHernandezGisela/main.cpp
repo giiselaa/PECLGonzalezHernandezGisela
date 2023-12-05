@@ -114,13 +114,13 @@ int main(int argc, char** argv)
               gestor.mostrarPedidosInorden();
             break;
         case 'Q':
-            //gestor.buscarPedidosArbol();
+              gestor.buscarPedidosArbol();
             break;
         case 'R':
               gestor.contarImpares();
             break;
         case 'T':
-            //gestor.mostrarPedidosHoja();
+              gestor.mostrarPedidosHoja();
             break;
         case 'U':
             //gestor.eliminarPedidoArbol();

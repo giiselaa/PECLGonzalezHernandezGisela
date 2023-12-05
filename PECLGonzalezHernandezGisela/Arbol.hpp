@@ -21,6 +21,10 @@ public:
     void recorrerEstandar(pnodoAbb);
     void recorrerUrgente(pnodoAbb);
     void recorrerInorden(pnodoAbb, bool);
+    void recorrerUrgenteId(pnodoAbb);
+    void busquedaPedidos();
+    void mostrarPedidosNodosHoja(pnodoAbb);
+    void mostrarPedidosNodosHojaArbol();
     int numNodos();
     int numNodos(pnodoAbb);
     int impares();
@@ -37,6 +41,10 @@ private:
     Lista estandarArbol;
     Lista urgenteArbol;
     Lista listaInorden;
+    Pedido pedidoUltS;
+    Pedido pedidoPrimS;
+    Pedido pedidoUltI;
+    Pedido pedidoPrimI;
 };
 
 #endif // ARBOL_HPP

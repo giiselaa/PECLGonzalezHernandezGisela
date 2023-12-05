@@ -18,6 +18,7 @@ public:
     void insertar(Pedido pedido);
     void insertarEnOrden(Pedido pedido);
     void insertarOrdenNumSeg(Pedido pedido);
+    void insertarOrdenId(Pedido pedido);
     int getLongitud();
     
 private:

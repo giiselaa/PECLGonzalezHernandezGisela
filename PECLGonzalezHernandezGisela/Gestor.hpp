@@ -29,7 +29,8 @@ public:
     void mostrarEstandarArbol();
     void mostrarUrgenteArbol();
     void mostrarPedidosInorden();
-    
+    void buscarPedidosArbol();
+    void mostrarPedidosHoja();
     void contarImpares();
     int longitudPila();
     int pedidosEnSalaA();

@@ -207,6 +207,45 @@ void Arbol::inordenMostrar() {
     listaInorden.mostrar();
 }
 
+void Arbol::recorrerUrgenteId(pnodoAbb nodo){
+    if(nodo != NULL){
+        urgenteArbol.insertarOrdenId(nodo -> pedido);
+        recorrerUrgenteId(nodo -> izq);
+        recorrerUrgenteId(nodo -> der);
+    }
+}
+
+void Arbol::busquedaPedidos(){
+     recorrerEstandar(raiz -> izq);
+     pedidoUltS = estandarArbol.getPrimero();
+     pedidoPrimS = estandarArbol.getUltimo();
+     cout<< "\t" <<setw(10)<< " El pedido estandar con menor numero de seguimiento es: " << endl;
+     pedidoUltS.mostrar();
+     cout<< "\t" <<setw(10)<< " El pedido estandar con mayor numero de seguimiento es: " << endl;
+     pedidoPrimS.mostrar();
+     recorrerUrgenteId(raiz -> der);
+     pedidoUltI = urgenteArbol.getPrimero();
+     pedidoPrimI = urgenteArbol.getUltimo();
+     cout<< "\t" <<setw(10)<< " El pedido urgente con menor numero de id es: " << endl;
+     pedidoUltI.mostrar();
+     cout<< "\t" <<setw(10)<< " El pedido urgente con mayor numero de id es: " << endl;
+     pedidoPrimI.mostrar();
+}
+
+void Arbol::mostrarPedidosNodosHoja(pnodoAbb nodo) {
+    if (nodo != NULL) {
+        if (nodo->izq == NULL && nodo->der == NULL) {
+            nodo->pedido.mostrar();
+        }
+        mostrarPedidosNodosHoja(nodo->izq);
+        mostrarPedidosNodosHoja(nodo->der);
+    }
+}
+
+void Arbol::mostrarPedidosNodosHojaArbol() {
+    mostrarPedidosNodosHoja(raiz);
+}
+
 
 Arbol::~Arbol() {}
 

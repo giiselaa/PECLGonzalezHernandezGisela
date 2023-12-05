@@ -317,6 +317,14 @@ void Gestor::contarImpares(){
     cout << "\t" <<setw(10)<< " El arbol tiene " << arbol.impares() << " pedidos con numero de seguimiento impar" << endl;
 }
 
+void Gestor::buscarPedidosArbol(){
+    arbol.busquedaPedidos();
+}
+
+void Gestor::mostrarPedidosHoja(){
+     cout<< "\t" << setw(10) << " Los pedidos que son nodo hoja son: " << endl;
+     arbol.mostrarPedidosNodosHojaArbol();
+}
 
 Gestor::~Gestor()
 {
