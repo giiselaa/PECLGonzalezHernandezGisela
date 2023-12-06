@@ -252,14 +252,14 @@ void Arbol::eliminarNodoArbol(int numSegE){
 
 void Arbol::recorrerArbol(pnodoAbb &nodo, int numSegE) {
     if (nodo != NULL) {
-        recorrerArbol(nodo->izq, numSegE); 
-
-        if (nodo->pedido.getNumSeg() == numSegE) {
+        if (numSegE < nodo -> pedido.getNumSeg()){
+            recorrerArbol(nodo->izq, numSegE); 
+        }else if (numSegE > nodo -> pedido.getNumSeg()){
+           recorrerArbol(nodo->der, numSegE); 
+        }else {
             eliminarNodo(nodo);
             return; // Se encontró y eliminó el nodo, no es necesario seguir recorriendo
         }
-
-        recorrerArbol(nodo->der, numSegE); 
     }
 }
 
