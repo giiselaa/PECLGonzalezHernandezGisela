@@ -246,6 +246,45 @@ void Arbol::mostrarPedidosNodosHojaArbol() {
     mostrarPedidosNodosHoja(raiz);
 }
 
+void Arbol::eliminarNodoArbol(int numSegE){
+    recorrerArbol(raiz,numSegE);
+}
+
+void Arbol::recorrerArbol(pnodoAbb &nodo, int numSegE) {
+    if (nodo != NULL) {
+        recorrerArbol(nodo->izq, numSegE); 
+
+        if (nodo->pedido.getNumSeg() == numSegE) {
+            eliminarNodo(nodo);
+            return; // Se encontró y eliminó el nodo, no es necesario seguir recorriendo
+        }
+
+        recorrerArbol(nodo->der, numSegE); 
+    }
+}
+
+void Arbol::eliminarNodo(pnodoAbb &nodo) {
+    if (nodo->izq == NULL) {
+        pnodoAbb temp = nodo->der;
+        delete nodo;
+        nodo = temp;
+    } else if (nodo->der == NULL) {
+        pnodoAbb temp = nodo->izq;
+        delete nodo;
+        nodo = temp;
+    } else {
+        pnodoAbb sucesor = encontrarSucesor(nodo->der);
+        nodo->pedido = sucesor->pedido;
+        eliminarNodo(sucesor);
+    }
+}
+
+pnodoAbb Arbol::encontrarSucesor(pnodoAbb nodo) {
+    while (nodo->izq != NULL) {
+        nodo = nodo->izq;
+    }
+    return nodo;
+}
 
 Arbol::~Arbol() {}
 

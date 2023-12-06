@@ -283,19 +283,16 @@ int Gestor::pedidosEnArbol(){
 }
 
 void Gestor::crearDibujarAbb(){
-    if(estandar.getLongitud() != 0 && urgente.getLongitud() !=0){
     if(!raizCreada){
     Pedido pedidoAux;
     pedidoAux.setNumSeg(500);
     arbol.insertar(pedidoAux);
     raizCreada=true;
     }
-    insertarPedidosEnArbol();
+    if(estandar.getLongitud() != 0 && urgente.getLongitud() !=0){
+       insertarPedidosEnArbol();
+    }
     arbol.dibujar();
-    }
-    else{
-    cout<< "\t" << setw(10) << "No hay pedidos que puedan ser insertados en el arbol" << endl;
-    }
 }
 
 void Gestor::mostrarEstandarArbol(){
@@ -325,6 +322,17 @@ void Gestor::mostrarPedidosHoja(){
      cout<< "\t" << setw(10) << " Los pedidos que son nodo hoja son: " << endl;
      arbol.mostrarPedidosNodosHojaArbol();
 }
+
+void Gestor::eliminarPedidoArbol(){
+    int numSegA;
+    cout<< "\t" << setw(10) << "Introduce el numero de seguimiento del pedido que deseas eliminar: " << endl;
+    cin>> numSegA;
+    cout<< "\t" << setw(10) << "El arbol antes de realizar la eliminacion: " << endl;
+    arbol.dibujar();
+    arbol.eliminarNodoArbol(numSegA);
+    cout<< "\t" << setw(10) << "El arbol tras realizar la eliminacion: " << endl;
+    arbol.dibujar();
+    }
 
 Gestor::~Gestor()
 {

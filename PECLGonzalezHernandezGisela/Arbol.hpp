@@ -25,6 +25,10 @@ public:
     void busquedaPedidos();
     void mostrarPedidosNodosHoja(pnodoAbb);
     void mostrarPedidosNodosHojaArbol();
+    void eliminarNodoArbol(int);
+    void recorrerArbol(pnodoAbb &nodo, int);
+    void eliminarNodo(pnodoAbb &nodo);
+    pnodoAbb encontrarSucesor(pnodoAbb nodo);
     int numNodos();
     int numNodos(pnodoAbb);
     int impares();

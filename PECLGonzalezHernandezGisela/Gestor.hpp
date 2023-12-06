@@ -32,6 +32,7 @@ public:
     void buscarPedidosArbol();
     void mostrarPedidosHoja();
     void contarImpares();
+    void eliminarPedidoArbol();
     int longitudPila();
     int pedidosEnSalaA();
     int pedidosEnSalaB();

@@ -123,7 +123,7 @@ int main(int argc, char** argv)
               gestor.mostrarPedidosHoja();
             break;
         case 'U':
-            //gestor.eliminarPedidoArbol();
+              gestor.eliminarPedidoArbol();
             break;
         case 'S':
             cout << "Saliendo del programa...\n";
