@@ -166,26 +166,24 @@ int Arbol::impares(pnodoAbb nodo){
 
 void Arbol::mostrarEstandar(){
     recorrerEstandar(raiz -> izq);
-    estandarArbol.mostrar();
 }
 
 void Arbol::recorrerEstandar(pnodoAbb nodo){
         if(nodo != NULL){
-            estandarArbol.insertarOrdenNumSeg(nodo -> pedido);
             recorrerEstandar(nodo -> izq);
+            nodo -> pedido.mostrar();
             recorrerEstandar(nodo -> der);
         }
 }
 
 void Arbol::mostrarUrgentes(){
     recorrerUrgente(raiz -> der);
-    urgenteArbol.mostrar();
 }
 
 void Arbol::recorrerUrgente(pnodoAbb nodo){
     if(nodo != NULL){
-        urgenteArbol.insertarOrdenNumSeg(nodo -> pedido);
         recorrerUrgente(nodo -> izq);
+        nodo-> pedido.mostrar();
         recorrerUrgente(nodo -> der);
     }
 }
@@ -195,7 +193,7 @@ void Arbol::recorrerInorden(pnodoAbb nodo, bool esRaiz) {
         recorrerInorden(nodo->izq, false); 
 
         if (!esRaiz) {
-            listaInorden.insertar(nodo->pedido); 
+            nodo-> pedido.mostrar(); 
         }
 
         recorrerInorden(nodo->der, false); 
@@ -204,32 +202,85 @@ void Arbol::recorrerInorden(pnodoAbb nodo, bool esRaiz) {
 
 void Arbol::inordenMostrar() {
     recorrerInorden(raiz, true); 
-    listaInorden.mostrar();
 }
 
-void Arbol::recorrerUrgenteId(pnodoAbb nodo){
-    if(nodo != NULL){
-        urgenteArbol.insertarEnOrden(nodo -> pedido);
-        recorrerUrgenteId(nodo -> izq);
-        recorrerUrgenteId(nodo -> der);
+
+void Arbol::busquedaNumSegMenor(pnodoAbb nodo) {
+    if (!nodo) {
+        return;
+    }
+    while (nodo->izq) {
+        nodo = nodo->izq;
+    }
+    nodo->pedido.mostrar(); 
+}
+
+void Arbol::busquedaNumSegMayor(pnodoAbb nodo) {
+    if (!nodo) {
+        return;
+    }
+    while (nodo->der) {
+        nodo = nodo->der;
+    }
+    nodo -> pedido.mostrar();
+}
+
+void Arbol::idMenor() {
+    pnodoAbb nodoMenor = nullptr;
+    busquedaIdMenor(raiz->der, nodoMenor);
+
+    if (nodoMenor) {
+        nodoMenor->pedido.mostrar();
+    } else {
+        return;
     }
 }
 
-void Arbol::busquedaPedidos(){
-     recorrerEstandar(raiz -> izq);
-     pedidoUltS = estandarArbol.getPrimero();
-     pedidoPrimS = estandarArbol.getUltimo();
-     cout<< "\t" <<setw(10)<< " El pedido estandar con menor numero de seguimiento es: " << endl;
-     pedidoUltS.mostrar();
-     cout<< "\t" <<setw(10)<< " El pedido estandar con mayor numero de seguimiento es: " << endl;
-     pedidoPrimS.mostrar();
-     recorrerUrgenteId(raiz -> der);
-     pedidoUltI = urgenteArbol.getPrimero();
-     pedidoPrimI = urgenteArbol.getUltimo();
-     cout<< "\t" <<setw(10)<< " El pedido urgente con menor numero de id es: " << endl;
-     pedidoUltI.mostrar();
-     cout<< "\t" <<setw(10)<< " El pedido urgente con mayor numero de id es: " << endl;
-     pedidoPrimI.mostrar();
+void Arbol::busquedaIdMenor(pnodoAbb nodo, pnodoAbb& nodoMenor) {
+    if (!nodo) {
+        return;
+    }
+    busquedaIdMenor(nodo->der, nodoMenor);
+        if (!nodoMenor || nodo->pedido.getId() < nodoMenor->pedido.getId()) {
+            nodoMenor = nodo;
+        }
+    busquedaIdMenor(nodo->izq, nodoMenor);
+}
+
+void Arbol::idMayor() {
+    pnodoAbb nodoMayor = nullptr;
+    busquedaIdMayor(raiz->der, nodoMayor);
+
+    if (nodoMayor) {
+        nodoMayor->pedido.mostrar();
+    } else {
+        return;
+    }
+}
+
+void Arbol::busquedaIdMayor(pnodoAbb nodo, pnodoAbb& nodoMayor) {
+    if (!nodo) {
+        return;
+    }
+    busquedaIdMayor(nodo->der, nodoMayor);
+
+        if (!nodoMayor || nodo->pedido.getId() > nodoMayor->pedido.getId()) {
+            nodoMayor = nodo;
+        }
+    busquedaIdMayor(nodo->izq, nodoMayor);
+}
+
+void Arbol::busquedaPedidos() {
+    
+    cout << "\t" << setw(10) << " El pedido estandar con menor numero de seguimiento es: " << endl;
+    busquedaNumSegMenor(raiz->izq);
+    cout << "\t" << setw(10) << " El pedido estandar con mayor numero de seguimiento es: " << endl;
+    busquedaNumSegMayor(raiz->der);
+    cout << "\t" << setw(10) << " El pedido urgente con menor numero de id es: " << endl;
+    idMenor();
+    cout << "\t" << setw(10) << " El pedido urgente con mayor numero de id es: " << endl;
+    idMayor();
+    
 }
 
 void Arbol::mostrarPedidosNodosHoja(pnodoAbb nodo) {
@@ -258,7 +309,7 @@ void Arbol::recorrerArbol(pnodoAbb &nodo, int numSegE) {
            recorrerArbol(nodo->der, numSegE); 
         }else {
             eliminarNodo(nodo);
-            return; // Se encontró y eliminó el nodo, no es necesario seguir recorriendo
+            return; 
         }
     }
 }

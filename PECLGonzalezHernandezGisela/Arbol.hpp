@@ -21,7 +21,12 @@ public:
     void recorrerEstandar(pnodoAbb);
     void recorrerUrgente(pnodoAbb);
     void recorrerInorden(pnodoAbb, bool);
-    void recorrerUrgenteId(pnodoAbb);
+    void busquedaNumSegMenor(pnodoAbb);
+    void busquedaNumSegMayor(pnodoAbb);
+    void idMenor();
+    void busquedaIdMenor(pnodoAbb, pnodoAbb&);
+    void idMayor();
+    void busquedaIdMayor(pnodoAbb, pnodoAbb&);
     void busquedaPedidos();
     void mostrarPedidosNodosHoja(pnodoAbb);
     void mostrarPedidosNodosHojaArbol();
@@ -42,13 +47,6 @@ private:
     void dibujarNodo(vector<string>& output, vector<string>& linkAbove, pnodoAbb nodo, int nivel, int minPos,
                      char linkChar);
     int altura(pnodoAbb);
-    Lista estandarArbol;
-    Lista urgenteArbol;
-    Lista listaInorden;
-    Pedido pedidoUltS;
-    Pedido pedidoPrimS;
-    Pedido pedidoUltI;
-    Pedido pedidoPrimI;
 };
 
 #endif // ARBOL_HPP
